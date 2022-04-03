@@ -9,17 +9,9 @@ module.exports = {
 
 	async execute(interaction) {
 		var newamst = await fetch("http://earthmcstats.ddns.net/api/v1/towns/Rajkot").then(res => res.json()).catch(err => { return err })
-        var parse = JSON.parse(newamst)
-        function printValues(parse) {
-            for(var k in parse) {
-                if(parse[k] instanceof Object) {
-                    printValues(parse[k]);
-                } else {
-                    document.write(parse[k] + "<br>");
-                };
-            }
-        };
-        console.log(parse["name"]["residents"])
+
+        
+        console.log(newamst.name)
         
 			await interaction.reply("done");
 	},
