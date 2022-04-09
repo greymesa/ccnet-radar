@@ -21,8 +21,8 @@ module.exports = {
 			.setDescription(italic('Information about the capital of OE, New Amsterdam')) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Mayor:', value: mayor, inline: true }, // Inline title of mayor, and it displays the content of the var "mayor".
-				{ name: 'Coords:', value: coordinates, inline: true }, // Inline title of coordinates, and it displays the content of the var "coordinates".
+				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true }, // Inline title of mayor, and it displays the content of the var "mayor".
+				{ name: 'Coords:', value: coordinates.replaceAll(/"/g, ""), inline: true }, // Inline title of coordinates, and it displays the content of the var "coordinates".
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
 			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", "), true) // Inline title of residents, and it removes the JSON symbols from the var "residents".
