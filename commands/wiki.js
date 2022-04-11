@@ -38,7 +38,12 @@ module.exports = {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('navalsiege')
-                .setDescription('A link to the Movecraft Naval Siege Guide!')),
+                .setDescription('A link to the Movecraft Naval Siege Guide!'))
+
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('link')
+                .setDescription('A link to the Wiki Homepage!')),
 
 
         async execute(interaction) {
@@ -113,6 +118,16 @@ module.exports = {
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
 
+        const wikilink = new MessageEmbed() // Create a message embed, called resourcepack.
+        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setTitle(bold('Wiki')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        .setDescription(italic('A direct link to the Wiki Homepage!'))
+        .addFields(
+           { name: 'Link:', value: '[https://wiki.ccnetmc.com/](https://wiki.ccnetmc.com/)', inline: true },
+        )
+        .setTimestamp() // Sets the current date and time at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+
             if (interaction.options.getSubcommand() === "nationsguide") {
                 await interaction.reply( {embeds: [nationsguide]} )
             }
@@ -139,6 +154,10 @@ module.exports = {
 
             else if (interaction.options.getSubcommand() === "navalsiege") {
                 await interaction.reply( {embeds: [navalsiege]} )
+            }
+
+            else if (interaction.options.getSubcommand() === "link") {
+                await interaction.reply( {embeds: [wikilink]} )
             }
 	},
 };
