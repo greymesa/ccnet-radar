@@ -108,14 +108,12 @@ async execute(interaction) {
 
         const reboot = new MessageEmbed() // Create a message embed, called resourcepack.
             .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('The server is down! Now what?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setTitle(bold('What should you do if a server goes down?')) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Follow this guide to help us know if the server is down:' },
-                { value:  `
+				{ name: 'One of the servers is down, now what?', value: `
                 
-                One of the servers is down, now what?\n
-                1) Check if anyone else has already alerted Zaify or Ineusia
+                \n1) Check if anyone else has already alerted Zaify or Ineusia
                 2) If not, ping @ Reboot in a relevant channel with a message stating which server is down\n
                 
                 One of the servers is suffering unbearable lag more than normal\n
@@ -123,7 +121,7 @@ async execute(interaction) {
                 2) If not, let a Moderator or Admin know and request them to check out the lag
                 3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
                 
-                `  }
+                `},
                 { name: '\u200B', value: '\u200B' }, // Blank row
 		)
                 .setTimestamp() // Sets the current date and time at the bottom of the embed.
