@@ -34,64 +34,62 @@ async execute(interaction) {
 
         var boldheading = bold("One of the servers is suffering unbearable lag more than normal?")
 
-        const ip = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('What is the IP?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const ip = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('What is the IP?'))
             .setDescription(italic('You can use the following IPs to join CCNet:'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Europe:', value: inlineCode("play.ccnetmc.com") },
-				//{ name: '\u200B', value: '\u200B' }, // Blank row
                 { name: 'NA:', value: inlineCode("na.ccnetmc.com") },
-                //{ name: '\u200B', value: '\u200B' }, // Blank row
                 { name: 'Asia:', value: inlineCode("asia.ccnetmc.com") },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
 
-        const wiki = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('Wiki')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const wiki = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('Wiki'))
             .setDescription(italic('You can view the wiki via this link:'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Link:', value: '[https://www.wiki.ccnetmc.com](https://www.wiki.ccnetmc.com)' },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const resourcepack = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('Resource Pack')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const resourcepack = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('Resource Pack'))
             .setDescription(italic('You can download the resource pack via this link:'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Link:', value: '[https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1](https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1)' },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const map = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('Dynmap')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const map = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('Dynmap'))
             .setDescription(italic('You can view the Dynmap via this link:'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Link:', value: '[https://www.map.ccnetmc.com](https://www.map.ccnetmc.com)' },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const logs = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('How Do I Send Logs?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const logs = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('How Do I Send Logs?'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Follow these instructions to get your logs:', value: `
                  1) Find your Minecraft folder.\n
                  
@@ -103,16 +101,16 @@ async execute(interaction) {
                 3) Open the log file and find the information you have been asked for. \n
                 
                 4) Send the information in the ticket, along with the log file for verification if needed.` },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const reboot = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('What should you do if a server goes down?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const reboot = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('What should you do if a server goes down?'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'One of the servers is down, now what?', value: `
                 
                 \n1) Check if anyone else has already alerted Zaify or Ineusia
@@ -124,10 +122,10 @@ async execute(interaction) {
                 3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
                 
                 `},
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                { name: '\u200B', value: '\u200B' },
 		)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
          if (interaction.options.getSubcommand() === "ip") {
             await interaction.reply( {embeds: [ip]} )

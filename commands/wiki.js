@@ -63,115 +63,115 @@ module.exports = {
 
         async execute(interaction) {
 
-        const nationsguide = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Nations Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const nationsguide = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Nations Starter Guide'))
         .setDescription(italic('Use this guide to learn about the Nations gamemode!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/Guides/nations-starter-guide](https://wiki.ccnetmc.com/Guides/nations-starter-guide)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const townyguide = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Nations Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const townyguide = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Nations Starter Guide'))
         .setDescription(italic('Use this guide to learn about the Towny gamemode!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Guides/towny-starter-guide](https://wiki.ccnetmc.com/en/Guides/towny-starter-guide)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const runes = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Runes - Runic Anvil & Rune Bosses')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const runes = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Runes - Runic Anvil & Rune Bosses'))
         .setDescription(italic('Use this article to learn more about runes!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Slimefun/Runes](https://wiki.ccnetmc.com/en/Slimefun/Runes)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const brewery = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Brewery - Fermentation, Distillation, and more!')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const brewery = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Brewery - Fermentation, Distillation, and more!'))
         .setDescription(italic('Use this article to learn more about Brewery!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Brewery](https://wiki.ccnetmc.com/en/Brewery)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const townyplugin = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Towny Plugin Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const townyplugin = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Towny Plugin Starter Guide'))
         .setDescription(italic('Use this article to learn more about the Towny plugin, used on both Nations and Towny!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Guides/TownyPlugin](https://wiki.ccnetmc.com/en/Guides/TownyPlugin)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const siegewar = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Siege War Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const siegewar = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Siege War Guide'))
         .setDescription(italic('Use this article to learn more about Sieges on Nations, and how they work!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarSieging](https://wiki.ccnetmc.com/en/Nations/WarSieging)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const combat = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Nations Warfare Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const combat = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Nations Warfare Guide'))
         .setDescription(italic('Use this article to learn more about Combat on Nations, and how it works!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarCombat](https://wiki.ccnetmc.com/en/Nations/WarCombat)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const navalsiege = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Movecraft Naval Siege Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const navalsiege = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Movecraft Naval Siege Guide'))
         .setDescription(italic('Use this article to learn more about the Naval Sieges around the Nations map!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarNavalSieges](https://wiki.ccnetmc.com/en/Nations/WarNavalSieges)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const geofeatures = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Geopolitical Features Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const geofeatures = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Geopolitical Features Guide'))
         .setDescription(italic('Use this article to learn more about the Geopolitical Features on Nations!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/Features](https://wiki.ccnetmc.com/en/Nations/Features)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const voting = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Voting Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const voting = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Voting Guide'))
         .setDescription(italic('Use this article to learn more about Voting!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Voting](https://wiki.ccnetmc.com/en/Voting)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-        const wikilink = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#EE6123') // Sets the sidebar colour of the embed.
-        .setTitle(bold('Wiki')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        const wikilink = new MessageEmbed()
+        .setColor('#EE6123')
+        .setTitle(bold('Wiki'))
         .setDescription(italic('A direct link to the Wiki Homepage!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/](https://wiki.ccnetmc.com/)', inline: true },
         )
-        .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+        .setTimestamp()
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
             if (interaction.options.getSubcommand() === "nationsguide") {
                 await interaction.reply( {embeds: [nationsguide]} )

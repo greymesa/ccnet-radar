@@ -2,7 +2,6 @@ const { SlashCommandBuilder, bold, italic } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
-// Make a new slash command, in this case, the capital command.
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('town')
@@ -20,9 +19,9 @@ module.exports = {
 
         var complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then(res => res.json()).catch(err => { return err })
 
-		var residents = JSON.stringify(complttown.residents) // Make a variable string for the residents of the town.
-		var mayor = JSON.stringify(complttown.mayor) // Make a variable string for the mayor of the town.
-		var coordinates = JSON.stringify("x: "+complttown.x+", "+"y: "+complttown.z) // Get both the x & y coordinate of the spawn point of the capital, & prefix with x/y.
+		var residents = JSON.stringify(complttown.residents)
+		var mayor = JSON.stringify(complttown.mayor)
+		var coordinates = JSON.stringify("x: "+complttown.x+", "+"y: "+complttown.z)
 		var bank = JSON.stringify(complttown.bank)
 		var upkeep = JSON.stringify(complttown.upkeep)
 		var nation = JSON.stringify(complttown.nation)
@@ -44,7 +43,7 @@ module.exports = {
 			.setDescription(italic(`Information about ${captownname}, a Member of ${inNation}, which is also ${peacefullness}`)) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true }, // Inline title of mayor, and it displays the content of the var "mayor".
+				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Coords:', value: coordinates.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
@@ -53,11 +52,11 @@ module.exports = {
 				{ name: 'Upkeep:', value: upkeep.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
-			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", ")) // Inline title of residents, and it removes the JSON symbols from the var "residents".
-			.addField('\u200B', '\u200B') // Blank row
-			.setTimestamp() // Sets the current date and time at the bottom of the embed.
-			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }); // Footer at the bottom of the embed.
+			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", "))
+			.addField('\u200B', '\u200B')
+			.setTimestamp()
+			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
-			await interaction.reply({ embeds: [town] }); // Reply to the slash command with the created embed.
+			await interaction.reply({ embeds: [town] });
 	},
 };

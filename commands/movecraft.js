@@ -108,252 +108,252 @@ module.exports = {
 
         async execute(interaction) {
 
-                const aircraftcarrier = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Aircraft Carrier')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const aircraftcarrier = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Aircraft Carrier'))
                 .setDescription(italic('Use this link to learn about the Aircraft Carrier!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/AircraftCarrier](https://wiki.ccnetmc.com/en/Movecraft/Nations/AircraftCarrier)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/aircraft_carrier.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const bomber = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Bomber')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const bomber = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Bomber'))
                 .setDescription(italic('Use this link to learn about the Bomber!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Bomber](https://wiki.ccnetmc.com/en/Movecraft/Nations/Bomber)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/bomber2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const caravel = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Caravel')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const caravel = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Caravel'))
                 .setDescription(italic('Use this link to learn about the Caravel!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Caravel](https://wiki.ccnetmc.com/en/Movecraft/Nations/Caravel)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/caravel2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const cargoship = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Cargo Ship')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const cargoship = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Cargo Ship'))
                 .setDescription(italic('Use this link to learn about the Cargo Ship!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/CargoShip](https://wiki.ccnetmc.com/en/Movecraft/Nations/CargoShip)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/cargo_ship.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const cog = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Cog')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const cog = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Cog'))
                 .setDescription(italic('Use this link to learn about the Cog!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Cog](https://wiki.ccnetmc.com/en/Movecraft/Nations/Cog)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/cog2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const corvette = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Corvette')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const corvette = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Corvette'))
                 .setDescription(italic('Use this link to learn about the Corvette!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Corvette](https://wiki.ccnetmc.com/en/Movecraft/Nations/Corvette)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/corvette.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const cruiser = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Cruiser')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const cruiser = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Cruiser'))
                 .setDescription(italic('Use this link to learn about the Cruiser!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Cruiser](https://wiki.ccnetmc.com/en/Movecraft/Nations/Cruiser)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/cruiser.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const depthcharge = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Depth Charge')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const depthcharge = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Depth Charge'))
                 .setDescription(italic('Use this link to learn about the Depth Charge!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/DepthCharge](https://wiki.ccnetmc.com/en/Movecraft/Nations/DepthCharge)', inline: true },)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const destroyer = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Destroyer')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const destroyer = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Destroyer'))
                 .setDescription(italic('Use this link to learn about the Destroyer!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Destroyer](https://wiki.ccnetmc.com/en/Movecraft/Nations/Destroyer)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/destroyer2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const dreadnought = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Dreadnought')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const dreadnought = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Dreadnought'))
                 .setDescription(italic('Use this link to learn about the Dreadnought!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Dreadnought](https://wiki.ccnetmc.com/en/Movecraft/Nations/Dreadnought)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/dreadnought.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const eastindiaman = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('East Indiaman')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const eastindiaman = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('East Indiaman'))
                 .setDescription(italic('Use this link to learn about the East Indiaman!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/EastIndiaman](https://wiki.ccnetmc.com/en/Movecraft/Nations/EastIndiaman)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/east_indiaman2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const elevator = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Elevator')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const elevator = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Elevator'))
                 .setDescription(italic('Use this link to learn about the Elevator!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Elevator](https://wiki.ccnetmc.com/en/Movecraft/Nations/Elevator)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/elevator-aircraft-carrier.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const fighter = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Fighter')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const fighter = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Fighter'))
                 .setDescription(italic('Use this link to learn about the Fighter!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Fighter](https://wiki.ccnetmc.com/en/Movecraft/Nations/Fighter)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/fighter.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const heavytank = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Heavy Tank')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const heavytank = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Heavy Tank'))
                 .setDescription(italic('Use this link to learn about the Heavy Tank!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/TankHeavy](https://wiki.ccnetmc.com/en/Movecraft/Nations/TankHeavy)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/heavy_tank.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const icebreaker = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Icebreaker')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const icebreaker = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Icebreaker'))
                 .setDescription(italic('Use this link to learn about the Icebreaker!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Icebreaker](https://wiki.ccnetmc.com/en/Movecraft/Nations/Icebreaker)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/icebreaker2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const ifv = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('(IFV) Infantry Fighting Vehicle')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const ifv = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('(IFV) Infantry Fighting Vehicle'))
                 .setDescription(italic('Use this link to learn about the (IFV) Infantry Fighting Vehicle!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/IFV](https://wiki.ccnetmc.com/en/Movecraft/Nations/IFV)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/ifv.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const landingcraft = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Landing Craft')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const landingcraft = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Landing Craft'))
                 .setDescription(italic('Use this link to learn about the Landing Craft!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/LandingCraft](https://wiki.ccnetmc.com/en/Movecraft/Nations/LandingCraft)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/landingcraft.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const shipyard = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Shipyards')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const shipyard = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Shipyards'))
                 .setDescription(italic('Use this link to learn about Shipyards!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Shipyard](https://wiki.ccnetmc.com/en/Movecraft/Nations/Shipyard)', inline: true },)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const submarine = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Submarine')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const submarine = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Submarine'))
                 .setDescription(italic('Use this link to learn about the Submarine!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Submarine](https://wiki.ccnetmc.com/en/Movecraft/Nations/Submarine)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/submarine.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const tank = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Tank')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const tank = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Tank'))
                 .setDescription(italic('Use this link to learn about the Tank!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Tank](https://wiki.ccnetmc.com/en/Movecraft/Nations/Tank)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/tank.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const torpedo = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Torpedo')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const torpedo = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Torpedo'))
                 .setDescription(italic('Use this link to learn about Torpedos!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Torpedo](https://wiki.ccnetmc.com/en/Movecraft/Nations/Torpedo)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/torpedo.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const train = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Train')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const train = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Train'))
                 .setDescription(italic('Use this link to learn about the Train!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Train](https://wiki.ccnetmc.com/en/Movecraft/Nations/Train)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/train.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const truck = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Truck')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const truck = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Truck'))
                 .setDescription(italic('Use this link to learn about the Truck!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Truck](https://wiki.ccnetmc.com/en/Movecraft/Nations/Truck)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/truck.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const turret = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Turret')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const turret = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Turret'))
                 .setDescription(italic('Use this link to learn about the Turret!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Turret](https://wiki.ccnetmc.com/en/Movecraft/Nations/Turret)', inline: true },)
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed. 
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
-                const zeppelin = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#EE6123') // Sets the sidebar colour of the embed.
-                .setTitle(bold('Zeppelin')) // Sets the main title of the embed, in bold (who woulda guessed?)
+                const zeppelin = new MessageEmbed()
+                .setColor('#EE6123')
+                .setTitle(bold('Zeppelin'))
                 .setDescription(italic('Use this link to learn about the Zeppelin!'))
                 .addFields(
                     { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Movecraft/Nations/Zeppelin](https://wiki.ccnetmc.com/en/Movecraft/Nations/Zeppelin)', inline: true },)
                 .setImage('https://wiki.ccnetmc.com/nations/ships/zeppelin2.png')
-                .setTimestamp() // Sets the current date and time at the bottom of the embed.
-                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
          if (interaction.options.getSubcommand() === "aircraftcarrier") {
              await interaction.reply( {embeds: [aircraftcarrier]} )
