@@ -15,7 +15,7 @@ module.exports = {
                 .setDescription('A link to our wiki!'))
         .addSubcommand(subcommand =>
             subcommand
-                .setName('resourcepack')
+                .setName('resourcepack') 
                 .setDescription('A link to the CCNet resourcepack!'))
         .addSubcommand(subcommand =>
             subcommand
@@ -55,6 +55,64 @@ async execute(interaction) {
             .setDescription(italic('You can view the wiki via this link:'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: 'Link:', value: '[https://www.wiki.ccnetmc.com](https://www.wiki.ccnetmc.com)' },
+                { name: '\u200B', value: '\u200B' }, // Blank row
+		)
+                .setTimestamp() // Sets the current date and time at the bottom of the embed.
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const resourcepack = new MessageEmbed() // Create a message embed, called resourcepack.
+            .setColor('#EE6123') // Sets the sidebar colour of the embed.
+            .setTitle(bold('Resource Pack')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setDescription(italic('You can download the resource pack via this link:'))
+			.addFields(
+				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: 'Link:', value: '[https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1](https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1)' },
+                { name: '\u200B', value: '\u200B' }, // Blank row
+		)
+                .setTimestamp() // Sets the current date and time at the bottom of the embed.
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const map = new MessageEmbed() // Create a message embed, called resourcepack.
+            .setColor('#EE6123') // Sets the sidebar colour of the embed.
+            .setTitle(bold('Dynmap')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setDescription(italic('You can view the Dynmap via this link:'))
+			.addFields(
+				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: 'Link:', value: '[https://www.map.ccnetmc.com](https://www.map.ccnetmc.com)' },
+                { name: '\u200B', value: '\u200B' }, // Blank row
+		)
+                .setTimestamp() // Sets the current date and time at the bottom of the embed.
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const logs = new MessageEmbed() // Create a message embed, called resourcepack.
+            .setColor('#EE6123') // Sets the sidebar colour of the embed.
+            .setTitle(bold('How Do I Send Logs?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setDescription(italic('Follow these instructions to get your logs:'))
+			.addFields(
+				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: 'Link:', value: `
+                
+                1) Find your Minecraft folder.
+                 - Windows: Click on Start and type %appdata% . Open the .minecraft folder.
+                 - MacOS: Click on Go → Go to Folder... and type ~/Library/Application Support . Open the minecraft folder.
+                
+                2) Open the logs folder. You will see a number of .gz files, with their date. Each file contains a log from that date. Extract those you think you need by using a file archiver (7Zip, WinRAR, Keka).
+                
+                3) Open the log file and find the information you have been asked for.
+                
+                4) Send the information in the ticket, along with the log file for verification if needed.` },
+                { name: '\u200B', value: '\u200B' }, // Blank row
+		)
+                .setTimestamp() // Sets the current date and time at the bottom of the embed.
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const reboot = new MessageEmbed() // Create a message embed, called resourcepack.
+            .setColor('#EE6123') // Sets the sidebar colour of the embed.
+            .setTitle(bold('Resource Pack')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setDescription(italic('You can download the resource pack via this link:'))
+			.addFields(
+				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Link:', value: '[https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1](https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1)' },
                 { name: '\u200B', value: '\u200B' }, // Blank row
 		)
@@ -67,6 +125,10 @@ async execute(interaction) {
 
         else if (interaction.options.getSubcommand() === "wiki") {
             await interaction.reply( {embeds: [wiki]} )
+        }
+
+        else if (interaction.options.getSubcommand() === "resourcepack") {
+            await interaction.reply( {embeds: [resourcepack]} )
         }
     },
 };
