@@ -88,10 +88,9 @@ async execute(interaction) {
         const logs = new MessageEmbed() // Create a message embed, called resourcepack.
             .setColor('#EE6123') // Sets the sidebar colour of the embed.
             .setTitle(bold('How Do I Send Logs?')) // Sets the main title of the embed, in bold (who woulda guessed?)
-            .setDescription(italic('Follow these instructions to get your logs:'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: ' ', value: `
+				{ name: 'Follow these instructions to get your logs:', value: `
                  1) Find your Minecraft folder.\n
                  
                  - Windows: Click on Start and type %appdata% . Open the .minecraft folder. \n
@@ -110,10 +109,9 @@ async execute(interaction) {
         const reboot = new MessageEmbed() // Create a message embed, called resourcepack.
             .setColor('#EE6123') // Sets the sidebar colour of the embed.
             .setTitle(bold('The server is down! Now what?')) // Sets the main title of the embed, in bold (who woulda guessed?)
-            .setDescription(italic('Follow this guide to help us know if the server is down!'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: ' ', value: `
+				{ name: 'Follow this guide to help us know if the server is down:', value: `
                 
                 One of the servers is down, now what?\n
                 1) Check if anyone else has already alerted Zaify or Ineusia
