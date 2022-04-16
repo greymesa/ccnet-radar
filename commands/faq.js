@@ -111,7 +111,8 @@ async execute(interaction) {
             .setTitle(bold('The server is down! Now what?')) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Follow this guide to help us know if the server is down:\n', value: `
+				{ name: 'Follow this guide to help us know if the server is down:' },
+                { value:  `
                 
                 One of the servers is down, now what?\n
                 1) Check if anyone else has already alerted Zaify or Ineusia
@@ -122,7 +123,7 @@ async execute(interaction) {
                 2) If not, let a Moderator or Admin know and request them to check out the lag
                 3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
                 
-                ` },
+                `  }
                 { name: '\u200B', value: '\u200B' }, // Blank row
 		)
                 .setTimestamp() // Sets the current date and time at the bottom of the embed.
