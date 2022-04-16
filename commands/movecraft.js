@@ -109,7 +109,7 @@ module.exports = {
         async execute(interaction) {
 
                 const aircraftcarrier = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Aircraft Carrier')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Aircraft Carrier!'))
                 .addFields(
@@ -119,7 +119,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const bomber = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Bomber')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Bomber!'))
                 .addFields(
@@ -129,7 +129,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const caravel = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Caravel')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Caravel!'))
                 .addFields(
@@ -139,7 +139,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const cargoship = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Cargo Ship')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Cargo Ship!'))
                 .addFields(
@@ -149,7 +149,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const cog = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Cog')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Cog!'))
                 .addFields(
@@ -159,7 +159,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const corvette = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Corvette')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Corvette!'))
                 .addFields(
@@ -169,7 +169,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const cruiser = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Cruiser')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Cruiser!'))
                 .addFields(
@@ -179,7 +179,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const depthcharge = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Depth Charge')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Depth Charge!'))
                 .addFields(
@@ -188,7 +188,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const destroyer = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Destroyer')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Destroyer!'))
                 .addFields(
@@ -198,7 +198,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const dreadnought = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Dreadnought')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Dreadnought!'))
                 .addFields(
@@ -208,7 +208,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const eastindiaman = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('East Indiaman')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the East Indiaman!'))
                 .addFields(
@@ -218,7 +218,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const elevator = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Elevator')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Elevator!'))
                 .addFields(
@@ -228,7 +228,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const fighter = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Fighter')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Fighter!'))
                 .addFields(
@@ -238,7 +238,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const heavytank = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Heavy Tank')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Heavy Tank!'))
                 .addFields(
@@ -248,7 +248,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const icebreaker = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Icebreaker')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Icebreaker!'))
                 .addFields(
@@ -258,7 +258,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const ifv = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('(IFV) Infantry Fighting Vehicle')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the (IFV) Infantry Fighting Vehicle!'))
                 .addFields(
@@ -268,7 +268,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const landingcraft = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Landing Craft')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Landing Craft!'))
                 .addFields(
@@ -278,7 +278,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const shipyard = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Shipyards')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about Shipyards!'))
                 .addFields(
@@ -287,7 +287,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const submarine = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Submarine')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Submarine!'))
                 .addFields(
@@ -297,7 +297,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const tank = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Tank')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Tank!'))
                 .addFields(
@@ -307,7 +307,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const torpedo = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Torpedo')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about Torpedos!'))
                 .addFields(
@@ -317,7 +317,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const train = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Train')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Train!'))
                 .addFields(
@@ -327,7 +327,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const truck = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Truck')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Truck!'))
                 .addFields(
@@ -337,7 +337,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
                 const turret = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Turret')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Turret!'))
                 .addFields(
@@ -346,7 +346,7 @@ module.exports = {
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed. 
 
                 const zeppelin = new MessageEmbed() // Create a message embed, called resourcepack.
-                .setColor('#0099ff') // Sets the sidebar colour of the embed.
+                .setColor('#EE6123') // Sets the sidebar colour of the embed.
                 .setTitle(bold('Zeppelin')) // Sets the main title of the embed, in bold (who woulda guessed?)
                 .setDescription(italic('Use this link to learn about the Zeppelin!'))
                 .addFields(

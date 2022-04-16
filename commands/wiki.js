@@ -49,7 +49,7 @@ module.exports = {
         async execute(interaction) {
 
         const nationsguide = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Nations Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this guide to learn about the Nations gamemode!'))
         .addFields(
@@ -59,7 +59,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const townyguide = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Nations Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this guide to learn about the Towny gamemode!'))
         .addFields(
@@ -69,7 +69,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const runes = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Runes - Runic Anvil & Rune Bosses')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about runes!'))
         .addFields(
@@ -79,7 +79,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const brewery = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Brewery - Fermentation, Distillation, and more!')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about Brewery!'))
         .addFields(
@@ -89,7 +89,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const townyplugin = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Towny Plugin Starter Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about the Towny plugin, used on both Nations and Towny!'))
         .addFields(
@@ -99,7 +99,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const siegewar = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Siege War Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about Sieges on Nations, and how they work!'))
         .addFields(
@@ -109,7 +109,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const navalsiege = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Movecraft Naval Siege Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about the Naval Sieges around the Nations map!'))
         .addFields(
@@ -119,7 +119,7 @@ module.exports = {
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const wikilink = new MessageEmbed() // Create a message embed, called resourcepack.
-        .setColor('#0099ff') // Sets the sidebar colour of the embed.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Wiki')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('A direct link to the Wiki Homepage!'))
         .addFields(

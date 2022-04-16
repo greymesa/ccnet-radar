@@ -39,7 +39,7 @@ module.exports = {
 		var inNation = nation.replaceAll(/"/g, "").replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
-			.setColor('#0099ff') // Sets the sidebar colour of the embed.
+			.setColor('#EE6123') // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setDescription(italic(`Information about ${captownname}, a Member of ${inNation}, which is also ${peacefullness}`)) // Sets the description of the embed, in italics.
 			.addFields(

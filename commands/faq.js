@@ -14,7 +14,7 @@ module.exports = {
 async execute(interaction) {
 
         const ip = new MessageEmbed() // Create a message embed, called resourcepack.
-            .setColor('#0099ff') // Sets the sidebar colour of the embed.
+            .setColor('#EE6123') // Sets the sidebar colour of the embed.
             .setTitle(bold('What is the IP?')) // Sets the main title of the embed, in bold (who woulda guessed?)
             .setDescription(italic('You can use the following IPs to join CCNet:'))
 			.addFields(
