@@ -111,7 +111,7 @@ async execute(interaction) {
             .setTitle(bold('The server is down! Now what?')) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Follow this guide to help us know if the server is down:', value: `
+				{ name: 'Follow this guide to help us know if the server is down:\n', value: `
                 
                 One of the servers is down, now what?\n
                 1) Check if anyone else has already alerted Zaify or Ineusia
