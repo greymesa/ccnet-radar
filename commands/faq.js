@@ -91,7 +91,7 @@ async execute(interaction) {
             .setDescription(italic('Follow these instructions to get your logs:'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Link:', value: `
+				{ name: '', value: `
                  1) Find your Minecraft folder.\n
                  
                  - Windows: Click on Start and type %appdata% . Open the .minecraft folder. \n
