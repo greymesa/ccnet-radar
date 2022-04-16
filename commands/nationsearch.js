@@ -24,12 +24,12 @@ module.exports = {
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
 
-		const nation = new MessageEmbed() // Create a message embed, called capital.
-			.setColor('#EE6123') // Sets the sidebar colour of the embed.
-			.setTitle(bold(`${capnationname}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
-			.setDescription(italic(`Information about ${capnationname}`)) // Sets the description of the embed, in italics.
+		const nation = new MessageEmbed()
+			.setColor('#EE6123')
+			.setTitle(bold(`${capnationname}`))
+			.setDescription(italic(`Information about ${capnationname}`))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Leader:', value: king.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Coords:', value: coordinates.replaceAll(/"/g, ""), inline: true },
                 { name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
