@@ -91,7 +91,7 @@ async execute(interaction) {
             .setDescription(italic('Follow these instructions to get your logs:'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: '', value: `
+				{ name: ' ', value: `
                  1) Find your Minecraft folder.\n
                  
                  - Windows: Click on Start and type %appdata% . Open the .minecraft folder. \n
@@ -113,7 +113,7 @@ async execute(interaction) {
             .setDescription(italic('Follow this guide to help us know if the server is down!'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: '', value: `
+				{ name: ' ', value: `
                 
                 One of the servers is down, now what?\n
                 1) Check if anyone else has already alerted Zaify or Ineusia
