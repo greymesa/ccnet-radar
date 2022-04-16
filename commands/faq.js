@@ -92,14 +92,14 @@ async execute(interaction) {
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Link:', value: `
+                 1) Find your Minecraft folder.\n
+                 
+                 - Windows: Click on Start and type %appdata% . Open the .minecraft folder. \n
+                 - MacOS: Click on Go → Go to Folder... and type ~/Library/Application Support . Open the minecraft folder. \n
                 
-                1) Find your Minecraft folder.
-                 - Windows: Click on Start and type %appdata% . Open the .minecraft folder.
-                 - MacOS: Click on Go → Go to Folder... and type ~/Library/Application Support . Open the minecraft folder.
+                2) Open the logs folder. You will see a number of .gz files, with their date. Each file contains a log from that date. Extract those you think you need by using a file archiver (7Zip, WinRAR, Keka). \n
                 
-                2) Open the logs folder. You will see a number of .gz files, with their date. Each file contains a log from that date. Extract those you think you need by using a file archiver (7Zip, WinRAR, Keka).
-                
-                3) Open the log file and find the information you have been asked for.
+                3) Open the log file and find the information you have been asked for. \n
                 
                 4) Send the information in the ticket, along with the log file for verification if needed.` },
                 { name: '\u200B', value: '\u200B' }, // Blank row
