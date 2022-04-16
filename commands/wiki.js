@@ -37,8 +37,23 @@ module.exports = {
 
         .addSubcommand(subcommand =>
             subcommand
+                .setName('combat')
+                .setDescription('A link to the CCNet Warfare Guide!'))
+
+        .addSubcommand(subcommand =>
+            subcommand
                 .setName('navalsiege')
                 .setDescription('A link to the Movecraft Naval Siege Guide!'))
+
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('geofeatures')
+                .setDescription('A link to the Geopolitical Features Guide!'))
+
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('voting')
+                .setDescription('A link to the Voting Guide!'))
 
         .addSubcommand(subcommand =>
             subcommand
@@ -108,12 +123,42 @@ module.exports = {
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
+        const combat = new MessageEmbed() // Create a message embed, called resourcepack.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
+        .setTitle(bold('Nations Warfare Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        .setDescription(italic('Use this article to learn more about Combat on Nations, and how it works!'))
+        .addFields(
+           { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarCombat](https://wiki.ccnetmc.com/en/Nations/WarCombat)', inline: true },
+        )
+        .setTimestamp() // Sets the current date and time at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
         const navalsiege = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#EE6123') // Sets the sidebar colour of the embed.
         .setTitle(bold('Movecraft Naval Siege Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
         .setDescription(italic('Use this article to learn more about the Naval Sieges around the Nations map!'))
         .addFields(
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarNavalSieges](https://wiki.ccnetmc.com/en/Nations/WarNavalSieges)', inline: true },
+        )
+        .setTimestamp() // Sets the current date and time at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const geofeatures = new MessageEmbed() // Create a message embed, called resourcepack.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
+        .setTitle(bold('Geopolitical Features Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        .setDescription(italic('Use this article to learn more about the Geopolitical Features on Nations!'))
+        .addFields(
+           { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/Features](https://wiki.ccnetmc.com/en/Nations/Features)', inline: true },
+        )
+        .setTimestamp() // Sets the current date and time at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
+
+        const voting = new MessageEmbed() // Create a message embed, called resourcepack.
+        .setColor('#EE6123') // Sets the sidebar colour of the embed.
+        .setTitle(bold('Voting Guide')) // Sets the main title of the embed, in bold (who woulda guessed?)
+        .setDescription(italic('Use this article to learn more about Voting!'))
+        .addFields(
+           { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Voting](https://wiki.ccnetmc.com/en/Voting)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
