@@ -32,6 +32,8 @@ module.exports = {
 
 async execute(interaction) {
 
+        var boldheading = bold("One of the servers is suffering unbearable lag more than normal?")
+
         const ip = new MessageEmbed() // Create a message embed, called resourcepack.
             .setColor('#EE6123') // Sets the sidebar colour of the embed.
             .setTitle(bold('What is the IP?')) // Sets the main title of the embed, in bold (who woulda guessed?)
@@ -116,7 +118,7 @@ async execute(interaction) {
                 \n1) Check if anyone else has already alerted Zaify or Ineusia
                 2) If not, ping @ Reboot in a relevant channel with a message stating which server is down\n
                 
-                bold(One of the servers is suffering unbearable lag more than normal?)
+                ${boldheading}
                 1) Check if anyone else has already alerted Staff
                 2) If not, let a Moderator or Admin know and request them to check out the lag
                 3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
