@@ -27,8 +27,6 @@ module.exports = {
 		var upkeep = JSON.stringify(complttown.upkeep)
 		var nation = JSON.stringify(complttown.nation)
 		var peaceful = JSON.stringify(complttown.peacefulness)
-
-		//             peacefulness: info[5].slice(14) == "true" ? true : false
 	
 		let peacefullness;
 		if (peaceful == "true"){
@@ -37,7 +35,6 @@ module.exports = {
 		else {
 			peacefullness = "Non-Peaceful"
 		}
-
 
 		var inNation = nation.replaceAll(/"/g, "").replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 
