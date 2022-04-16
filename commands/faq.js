@@ -19,11 +19,11 @@ async execute(interaction) {
             .setDescription(italic('You can use the following IPs to join CCNet:'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Europe:', value: inlineCode(bold("play.ccnetmc.com")) },
+				{ name: 'Europe:', value: inlineCode("play.ccnetmc.com") },
 				//{ name: '\u200B', value: '\u200B' }, // Blank row
-                { name: 'NA:', value: inlineCode(bold("na.ccnetmc.com")) },
+                { name: 'NA:', value: inlineCode("na.ccnetmc.com") },
                 //{ name: '\u200B', value: '\u200B' }, // Blank row
-                { name: 'Asia:', value: inlineCode(bold("asia.ccnetmc.com")) },
+                { name: 'Asia:', value: inlineCode("asia.ccnetmc.com") },
                 { name: '\u200B', value: '\u200B' }, // Blank row
 		)
                     .setTimestamp() // Sets the current date and time at the bottom of the embed.
