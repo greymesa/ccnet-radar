@@ -116,7 +116,7 @@ async execute(interaction) {
                 \n1) Check if anyone else has already alerted Zaify or Ineusia
                 2) If not, ping @ Reboot in a relevant channel with a message stating which server is down\n
                 
-                One of the servers is suffering unbearable lag more than normal\n
+                bold(One of the servers is suffering unbearable lag more than normal?)
                 1) Check if anyone else has already alerted Staff
                 2) If not, let a Moderator or Admin know and request them to check out the lag
                 3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
