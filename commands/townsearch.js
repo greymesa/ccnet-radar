@@ -44,7 +44,7 @@ module.exports = {
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#0099ff') // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
-			.setDescription(italic(`Information about ${captownname}, a (Member of ${inNation}) (${peacefullness})`)) // Sets the description of the embed, in italics.
+			.setDescription(italic(`Information about ${captownname}, a Member of ${inNation}, which is also ${peacefullness}`)) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true }, // Inline title of mayor, and it displays the content of the var "mayor".
