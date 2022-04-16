@@ -130,5 +130,9 @@ async execute(interaction) {
         else if (interaction.options.getSubcommand() === "resourcepack") {
             await interaction.reply( {embeds: [resourcepack]} )
         }
+
+        else if (interaction.options.getSubcommand() === "logs") {
+            await interaction.reply( {embeds: [logs]} )
+        }
     },
 };
