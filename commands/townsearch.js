@@ -30,12 +30,20 @@ module.exports = {
 
 		//             peacefulness: info[5].slice(14) == "true" ? true : false
 	
-		var isPeaceful = peaceful == "true" ? true : false
+		let peacefullness;
+		if (peaceful == "true"){
+			peacefullness = "Peaceful"
+		}
+		else {
+			peacefullness = "Non-Peaceful"
+		}
+
+
 		var inNation = nation.replaceAll(/"/g, "").replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#0099ff') // Sets the sidebar colour of the embed.
-			.setTitle(bold(`${captownname} (Member of ${inNation})`)) // Sets the main title of the embed, in bold (who woulda guessed?)
+			.setTitle(bold(`${captownname} (Member of ${inNation}) (${peacefullness})`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setDescription(italic('Information about '+captownname)) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
