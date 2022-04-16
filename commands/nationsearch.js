@@ -25,7 +25,7 @@ module.exports = {
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
 
-        const middle = residents.length / 3; // if it's odd, it'll round down
+        const middle = residents.length / 4; // if it's odd, it'll round down
         const first = residents.slice(0, middle)
         const last = residents.slice(middle, residents.length);
 
