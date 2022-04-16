@@ -25,6 +25,10 @@ module.exports = {
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
 
+        const middle = residents.length / 2; // if it's odd, it'll round down
+        const first = residents.slice(0, middle)
+        const last = residents.slice(middle, residents.length);
+
 
 		const nation = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
@@ -37,7 +41,7 @@ module.exports = {
                 { name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
-            .addField('Towns:', towns.replaceAll(/"/g, "").replaceAll(",", ", "))
+            .addField('Towns:', first.replaceAll(/"/g, "").replaceAll(",", ", "))
 			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", "))
 			.addField('\u200B', '\u200B')
 			.setTimestamp()
