@@ -20,10 +20,11 @@ async execute(interaction) {
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Europe:', value: "play.ccnetmc.com" },
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				//{ name: '\u200B', value: '\u200B' }, // Blank row
                 { name: 'NA:', value: "na.ccnetmc.com" },
-                { name: '\u200B', value: '\u200B' }, // Blank row
+                //{ name: '\u200B', value: '\u200B' }, // Blank row
                 { name: 'Asia:', value: "asia.ccnetmc.com" },
+                { name: '\u200B', value: '\u200B' }, // Blank row
 		)
                     .setTimestamp() // Sets the current date and time at the bottom of the embed.
                     .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
