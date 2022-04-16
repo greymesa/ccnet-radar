@@ -42,7 +42,7 @@ module.exports = {
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
            // .addField('Towns:', .replaceAll(/"/g, "").replaceAll(",", ", "))
-			.addField('Residents:', first.replaceAll(/"/g, "").replaceAll(",", ", "))
+			.addField('Residents:', inlineCode(first.replaceAll(/"/g, "").replaceAll(",", ", ")))
 			.addField('\u200B', '\u200B')
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
