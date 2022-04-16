@@ -197,8 +197,20 @@ module.exports = {
                 await interaction.reply( {embeds: [siegewar]} )
             }
 
+            else if (interaction.options.getSubcommand() === "combat") {
+                await interaction.reply( {embeds: [combat]} )
+            }
+
             else if (interaction.options.getSubcommand() === "navalsiege") {
                 await interaction.reply( {embeds: [navalsiege]} )
+            }
+
+            else if (interaction.options.getSubcommand() === "geofeatures") {
+                await interaction.reply( {embeds: [geofeatures]} )
+            }
+
+            else if (interaction.options.getSubcommand() === "voting") {
+                await interaction.reply( {embeds: [voting]} )
             }
 
             else if (interaction.options.getSubcommand() === "link") {
