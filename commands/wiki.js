@@ -56,7 +56,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/Guides/nations-starter-guide](https://wiki.ccnetmc.com/Guides/nations-starter-guide)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const townyguide = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -66,7 +66,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Guides/towny-starter-guide](https://wiki.ccnetmc.com/en/Guides/towny-starter-guide)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const runes = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -76,7 +76,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Slimefun/Runes](https://wiki.ccnetmc.com/en/Slimefun/Runes)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const brewery = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -86,7 +86,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Brewery](https://wiki.ccnetmc.com/en/Brewery)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const townyplugin = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -96,7 +96,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Guides/TownyPlugin](https://wiki.ccnetmc.com/en/Guides/TownyPlugin)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const siegewar = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -106,7 +106,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarSieging](https://wiki.ccnetmc.com/en/Nations/WarSieging)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const navalsiege = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -116,7 +116,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/en/Nations/WarNavalSieges](https://wiki.ccnetmc.com/en/Nations/WarNavalSieges)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
         const wikilink = new MessageEmbed() // Create a message embed, called resourcepack.
         .setColor('#0099ff') // Sets the sidebar colour of the embed.
@@ -126,7 +126,7 @@ module.exports = {
            { name: 'Link:', value: '[https://wiki.ccnetmc.com/](https://wiki.ccnetmc.com/)', inline: true },
         )
         .setTimestamp() // Sets the current date and time at the bottom of the embed.
-        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }) // Footer at the bottom of the embed.
+        .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }) // Footer at the bottom of the embed.
 
             if (interaction.options.getSubcommand() === "nationsguide") {
                 await interaction.reply( {embeds: [nationsguide]} )

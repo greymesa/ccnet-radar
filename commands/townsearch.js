@@ -59,7 +59,7 @@ module.exports = {
 			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", ")) // Inline title of residents, and it removes the JSON symbols from the var "residents".
 			.addField('\u200B', '\u200B') // Blank row
 			.setTimestamp() // Sets the current date and time at the bottom of the embed.
-			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: '' }); // Footer at the bottom of the embed.
+			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' }); // Footer at the bottom of the embed.
         
 			await interaction.reply({ embeds: [town] }); // Reply to the slash command with the created embed.
 	},
