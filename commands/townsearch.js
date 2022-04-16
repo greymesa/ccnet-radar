@@ -18,7 +18,7 @@ module.exports = {
 
         var captownname = townname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 
-        var complttown = await fetch("https://ccnet-api.herokuapp.com/api/v1/towns/"+townname).then(res => res.json()).catch(err => { return err })
+        var complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then(res => res.json()).catch(err => { return err })
 
 		var residents = JSON.stringify(complttown.residents) // Make a variable string for the residents of the town.
 		var mayor = JSON.stringify(complttown.mayor) // Make a variable string for the mayor of the town.
