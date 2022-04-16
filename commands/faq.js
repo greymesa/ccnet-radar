@@ -109,11 +109,22 @@ async execute(interaction) {
 
         const reboot = new MessageEmbed() // Create a message embed, called resourcepack.
             .setColor('#EE6123') // Sets the sidebar colour of the embed.
-            .setTitle(bold('Resource Pack')) // Sets the main title of the embed, in bold (who woulda guessed?)
-            .setDescription(italic('You can download the resource pack via this link:'))
+            .setTitle(bold('The server is down! Now what?')) // Sets the main title of the embed, in bold (who woulda guessed?)
+            .setDescription(italic('Follow this guide to help us know if the server is down!'))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'Link:', value: '[https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1](https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1)' },
+				{ name: '', value: `
+                
+                One of the servers is down, now what?\n
+                1) Check if anyone else has already alerted Zaify or Ineusia
+                2) If not, ping @ Reboot in a relevant channel with a message stating which server is down\n
+                
+                One of the servers is suffering unbearable lag more than normal\n
+                1) Check if anyone else has already alerted Staff
+                2) If not, let a Moderator or Admin know and request them to check out the lag
+                3) If the staff member determines that the lag is sufficiently worse than normal, they may request that the affected server is rebooted
+                
+                ` },
                 { name: '\u200B', value: '\u200B' }, // Blank row
 		)
                 .setTimestamp() // Sets the current date and time at the bottom of the embed.
@@ -129,6 +140,10 @@ async execute(interaction) {
 
         else if (interaction.options.getSubcommand() === "resourcepack") {
             await interaction.reply( {embeds: [resourcepack]} )
+        }
+
+        else if (interaction.options.getSubcommand() === "map") {
+            await interaction.reply( {embeds: [map]} )
         }
 
         else if (interaction.options.getSubcommand() === "logs") {
