@@ -149,5 +149,9 @@ async execute(interaction) {
         else if (interaction.options.getSubcommand() === "logs") {
             await interaction.reply( {embeds: [logs]} )
         }
+
+        else if (interaction.options.getSubcommand() === "reboot") {
+            await interaction.reply( {embeds: [reboot]} )
+        }
     },
 };
