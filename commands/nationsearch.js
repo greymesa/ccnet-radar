@@ -19,16 +19,10 @@ module.exports = {
 
         var compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/"+nationname).then(res => res.json()).catch(err => { return err })
 
-        var residents = JSON.stringify(compltnation.residents)
         var towns = JSON.stringify(compltnation.towns)
         var king = JSON.stringify(compltnation.king)
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
-
-        const middle = residents.length / 4; // if it's odd, it'll round down
-        const first = residents.slice(0, middle)
-        const last = residents.slice(middle, residents.length);
-
 
 		const nation = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
@@ -41,8 +35,7 @@ module.exports = {
                 { name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
-           // .addField('Towns:', .replaceAll(/"/g, "").replaceAll(",", ", "))
-			.addField('Residents:', inlineCode(first.replaceAll(/"/g, "").replaceAll(",", ", ")))
+			.addField('Towns:', towns.replaceAll(/"/g, "").replaceAll(",", ", "))
 			.addField('\u200B', '\u200B')
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
