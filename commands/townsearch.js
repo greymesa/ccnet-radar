@@ -21,7 +21,7 @@ module.exports = {
 
 		var residents = JSON.stringify(complttown.residents)
 		var mayor = JSON.stringify(complttown.mayor)
-		var coordinates = JSON.stringify("x: "+complttown.x+", "+"y: "+complttown.z)
+		var coordinates = JSON.stringify("x: "+complttown.x+", "+"z: "+complttown.z)
 		var bank = JSON.stringify(complttown.bank)
 		var upkeep = JSON.stringify(complttown.upkeep)
 		var nation = JSON.stringify(complttown.nation)
