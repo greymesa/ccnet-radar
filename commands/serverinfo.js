@@ -15,10 +15,19 @@ module.exports = {
         var towny = JSON.stringify(serverInfo.towny)
         var nations = JSON.stringify(serverInfo.nations)
         var hub = JSON.stringify(serverInfo.hub)
+		var firstServerStatus = JSON.stringify(serverInfo.serverOnline)
+
+		let serverStatus;
+		if (firstServerStatus == "true"){
+			serverStatus = "Online"
+		}
+		else {
+			serverStatus = "Offline"
+		}
 
 		const serverinfo = new MessageEmbed() // Create a message embed
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
-			.setTitle(bold(`CCNetMC`)) // Sets the main title of the embed, in bold (who woulda guessed?)
+			.setTitle(bold(`CCNetMC - ${serverStatus}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setDescription(italic(`Information about CCNetMC, including player counts,\n and status`)) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
