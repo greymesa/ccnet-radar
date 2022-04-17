@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, italic, inlineCode } = require('@discordjs/builders');
+const { SlashCommandBuilder, bold, italic } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
