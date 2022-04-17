@@ -19,7 +19,7 @@ module.exports = {
 		const serverinfo = new MessageEmbed() // Create a message embed
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
 			.setTitle(bold(`CCNetMC`)) // Sets the main title of the embed, in bold (who woulda guessed?)
-			.setDescription(italic(`Information about CCNetMC, including player counts for all servers, and if the server is online or not!`)) // Sets the description of the embed, in italics.
+			.setDescription(italic(`Information about CCNetMC, including player counts, and status`)) // Sets the description of the embed, in italics.
 			.addFields(
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Towny:', value: towny.replaceAll(/"/g, ""), inline: true },
