@@ -32,8 +32,6 @@ module.exports = {
 				{ name: 'Nation:', value: nation.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
-			.addField('Towns:', towns.replaceAll(/"/g, "").replaceAll(",", ", "))
-			.addField('\u200B', '\u200B')
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
