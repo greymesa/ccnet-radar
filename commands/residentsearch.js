@@ -15,7 +15,7 @@ module.exports = {
 
 		const username = interaction.options.getString("name");
 
-        var capusername = username.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
+        var capusername = username.replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 
         var compltusername = await fetch("https://shadowevil015.tech/api/v1/allPlayers/"+username).then(res => res.json()).catch(err => { return err })
 
