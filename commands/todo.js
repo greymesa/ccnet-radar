@@ -21,6 +21,7 @@ module.exports = {
 		)
 			.addFields(
 				{ name: 'Issues:', value: `- As far as I know, there are currently no issues.` },
+				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
 
 			.setTimestamp()
