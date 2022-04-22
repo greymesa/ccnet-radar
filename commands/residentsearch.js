@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, italic } = require('@discordjs/builders');
+const { SlashCommandBuilder, bold, inlineCode } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
@@ -25,7 +25,7 @@ module.exports = {
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
 			.setTitle(bold(`${capusername}`))
-			.setDescription(italic(`Information about ${capusername}`))
+			.setDescription(inlineCode(`Information about ${capusername}`))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Town:', value: town.replaceAll(/"/g, ""), inline: true },
