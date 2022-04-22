@@ -13,8 +13,7 @@ module.exports = {
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
 			.setTitle(bold(`To Do List`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
-				{ name: 'To Do:', value: `- Implement a command to track sieges (e.g the data found on the dynmap)\n
+				{ name: 'To Do:', value: `- Implement a command to track sieges (e.g the data found on the dynmap)
                                           - Pull from upstream (big changes)
                                           - Look into a /shop command, since shops are shown on the dynmap
                                           - Make the message embeds look better ig`},
@@ -22,7 +21,6 @@ module.exports = {
 		)
 			.addFields(
 				{ name: 'Issues:', value: `- As far as I know, there are currently no issues.` },
-				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
 
 			.setTimestamp()
