@@ -22,9 +22,11 @@ module.exports = {
 		var residents = JSON.stringify(complttown.residents)
 		var mayor = JSON.stringify(complttown.mayor)
 		var coordinates = JSON.stringify("x: "+complttown.x+", "+"z: "+complttown.z)
+		var coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${complttown.x},64,${complttown.z};4`
 		var bank = JSON.stringify(complttown.bank)
 		var upkeep = JSON.stringify(complttown.upkeep)
 		var nation = JSON.stringify(complttown.nation)
+		var capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 		var peaceful = JSON.stringify(complttown.peacefulness)
 		var chunks = JSON.stringify(complttown.area)
 	
@@ -36,19 +38,17 @@ module.exports = {
 			peacefullness = "Non-Peaceful"
 		}
 
-		var inNation = nation.replaceAll(/"/g, "").replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
-
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
 				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true },
-				{ name: 'Nation:', value: nation.replaceAll(/"/g, ""), inline: true },
+				{ name: 'Nation:', value: capNation.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
 				{ name: 'Chunks:', value: chunks, inline: true },
-				{ name: 'Location:', value: coordinates.replaceAll(/"/g, ""), inline: true },
+				{ name: 'Location:', value: `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
 				{ name: 'Bank:', value: bank.replaceAll(/"/g, ""), inline: true },
