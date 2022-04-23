@@ -36,12 +36,12 @@ module.exports = {
 				{ name: 'Leader:', value: king.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
 			)
-			.addField('Location:', coordinates.replaceAll(/"/g, ""))
+			.addField('Location:', coordinates.replaceAll(/"/g, ""), false)
 			.addFields(
 				{ name: 'Chunks:', value: chunks, inline: true },
 				{ name: 'Residents:', value: residentsCount, inline: true },
 			)
-			.addField('Towns:', codeTowns.replaceAll(/"/g, "")).replaceAll(/,/g, ", ")
+			.addField('Towns:', codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "), false)
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
