@@ -28,7 +28,11 @@ module.exports = {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('reboot')
-                .setDescription('A guide on what to do, in the event of a server crash!')),
+                .setDescription('A guide on what to do, in the event of a server crash!'))
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('appeal')
+                .setDescription('A guide on how to appeal a ban!')),
 
 async execute(interaction) {
 
@@ -127,6 +131,18 @@ async execute(interaction) {
                 .setTimestamp()
                 .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
 
+        const appeal = new MessageEmbed()
+            .setColor('#EE6123')
+            .setTitle(bold('How do I appeal?'))
+            .setDescription(italic('You can appeal your ban via this link:'))
+			.addFields(
+				{ name: '\u200B', value: '\u200B' },
+				{ name: 'Link:', value: '[https://ccnetmc.com/appeal](https://ccnetmc.com/appeal)' },
+                { name: '\u200B', value: 'Note: You will need to create an account to make a ban appeal.' },
+		)
+                .setTimestamp()
+                .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' })
+
          if (interaction.options.getSubcommand() === "ip") {
             await interaction.reply( {embeds: [ip]} )
         }
@@ -149,6 +165,10 @@ async execute(interaction) {
 
         else if (interaction.options.getSubcommand() === "reboot") {
             await interaction.reply( {embeds: [reboot]} )
+        }
+
+        else if (interaction.options.getSubcommand() === "appeal") {
+            await interaction.reply( {embeds: [appeal]} )
         }
     },
 };
