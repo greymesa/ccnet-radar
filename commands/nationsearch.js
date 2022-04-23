@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, italic } = require('@discordjs/builders');
+const { SlashCommandBuilder, bold, codeBlock } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
@@ -20,6 +20,7 @@ module.exports = {
         var compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/"+nationname).then(res => res.json()).catch(err => { return err })
 
         var towns = JSON.stringify(compltnation.towns)
+		var codeTowns = codeBlock(towns)
         var king = JSON.stringify(compltnation.king)
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
@@ -40,7 +41,7 @@ module.exports = {
 				{ name: 'Chunks:', value: chunks, inline: true },
 				{ name: 'Residents:', value: residentsCount, inline: true },
 			)
-			.addField('Towns:', codeBlock(towns.replaceAll(/"/g, "")).replaceAll(/,/g, ", "))
+			.addField('Towns:', codeTowns.replaceAll(/"/g, "")).replaceAll(/,/g, ", ")
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
