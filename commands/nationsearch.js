@@ -24,6 +24,7 @@ module.exports = {
         var king = JSON.stringify(compltnation.king)
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
+		var coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${compltnation.capitalX},64,${compltnation.capitalZ};4`
 		var residents = JSON.stringify(compltnation.residents)
 		var residentsCount = residents.split(",").length
 		var totalResidents = residentsCount.toString()
@@ -37,7 +38,7 @@ module.exports = {
 				{ name: 'Leader:', value: king.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
 			)
-			.addField('Location:', coordinates.replaceAll(/"/g, ""))
+			.addField('Location:', `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""))
 			.addFields(
 				{ name: 'Chunks:', value: chunks, inline: true },
 				{ name: 'Residents:', value: totalResidents, inline: true },
