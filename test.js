@@ -1,4 +1,7 @@
+const util = require("minecraft-server-util")
 
-		const util = require("minecraft-server-util")
-
-		util.status('play.ccnetmc.com, 25566').then((result) => console.log(result)).catch((error) => console.error(error));
+        const options = {
+            enableSRV: true
+        }
+        
+		util.status('play.ccnetmc.com', 25567, options).then((result) => console.log(result)).catch((error) => console.error(error));
