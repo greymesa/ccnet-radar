@@ -17,6 +17,11 @@ module.exports = {
         var hub = JSON.stringify(serverInfo.hub)
 		var firstServerStatus = JSON.stringify(serverInfo.serverOnline)
 
+		var MCAPI = require("minecraft-lib")
+
+		const serverData = await MCAPI.servers.get("play.ccnetmc.com:25567").catch(err => { return err })
+		var playerCount = serverData.players.online
+
 		let serverStatus;
 		if (firstServerStatus == "true"){
 			serverStatus = "Online"
@@ -35,6 +40,7 @@ module.exports = {
 				{ name: 'Nations:', value: nations.replaceAll(/"/g, ""), inline: true },
 				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
+			.addField('Movecraft:', playerCount)
 			.addFields(
 				{ name: 'Hub:', value: hub.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Network:', value: network.replaceAll(/"/g, ""), inline: true },
