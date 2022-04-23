@@ -23,20 +23,24 @@ module.exports = {
         var king = JSON.stringify(compltnation.king)
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
+		var residents = JSON.stringify(compltnation.residents)
+		var residentsCount = residents.split(",").length - 1
+		var chunks = JSON.stringify(compltnation.area)
 
 		const nation = new MessageEmbed()
 			.setColor('#EE6123')
 			.setTitle(bold(`${capnationname}`))
-			.setDescription(italic(`Information about ${capnationname}`))
+			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
-				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Leader:', value: king.replaceAll(/"/g, ""), inline: true },
-				{ name: 'Coords:', value: coordinates.replaceAll(/"/g, ""), inline: true },
-                { name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
-				{ name: '\u200B', value: '\u200B' }, // Blank row
-		)
-			.addField('Towns:', towns.replaceAll(/"/g, "").replaceAll(",", ", "))
-			.addField('\u200B', '\u200B')
+				{ name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
+			)
+			.addField('Location:', coordinates.replaceAll(/"/g, ""))
+			.addFields(
+				{ name: 'Chunks:', value: chunks, inline: true },
+				{ name: 'Residents:', value: residentsCount, inline: true },
+			)
+			.addField('Towns:', codeBlock(towns.replaceAll(/"/g, "")).replaceAll(/,/g, ", "))
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
