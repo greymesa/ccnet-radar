@@ -136,7 +136,6 @@ async execute(interaction) {
             .setTitle(bold('How do I appeal?'))
             .setDescription(italic('You can appeal your ban via this link:'))
 			.addFields(
-				{ name: '\u200B', value: '\u200B' },
 				{ name: 'Link:', value: '[https://ccnetmc.com/appeal](https://ccnetmc.com/appeal)' },
                 { name: '\u200B', value: 'Note: You will need to create an account to make a ban appeal.' },
 		)
