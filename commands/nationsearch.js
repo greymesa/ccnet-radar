@@ -25,7 +25,8 @@ module.exports = {
         var capital = JSON.stringify(compltnation.capitalName)
         var coordinates = JSON.stringify("x: "+compltnation.capitalX+", "+"z: "+compltnation.capitalZ)
 		var residents = JSON.stringify(compltnation.residents)
-		var residentsCount = residents.split(",").length - 1
+		var residentsCount = residents.split(",").length
+		var totalResidents = residentsCount.toString()
 		var chunks = JSON.stringify(compltnation.area)
 
 		const nation = new MessageEmbed()
@@ -36,12 +37,12 @@ module.exports = {
 				{ name: 'Leader:', value: king.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Capital:', value: capital.replaceAll(/"/g, ""), inline: true },
 			)
-			.addField('Location:', coordinates.replaceAll(/"/g, ""), false)
+			.addField('Location:', coordinates.replaceAll(/"/g, ""))
 			.addFields(
 				{ name: 'Chunks:', value: chunks, inline: true },
-				{ name: 'Residents:', value: residentsCount, inline: true },
+				{ name: 'Residents:', value: totalResidents, inline: true },
 			)
-			.addField('Towns:', codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "), false)
+			.addField('Towns:', codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "))
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
