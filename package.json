@@ -25,7 +25,7 @@
     "ccnetmc": "^1.5.3",
     "discord-api-types": "^0.29.0",
     "discord.js": "^13.6.0",
-    "minecraft-lib": "^1.1.6",
+    "minecraft-server-util": "^5.2.9",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15"
   }
