@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, italic } = require('@discordjs/builders');
+const { SlashCommandBuilder, bold, codeBlock } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
@@ -26,6 +26,7 @@ module.exports = {
 		var upkeep = JSON.stringify(complttown.upkeep)
 		var nation = JSON.stringify(complttown.nation)
 		var peaceful = JSON.stringify(complttown.peacefulness)
+		var chunks = JSON.stringify(complttown.area)
 	
 		let peacefullness;
 		if (peaceful == "true"){
@@ -39,21 +40,21 @@ module.exports = {
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor('#EE6123') // Sets the sidebar colour of the embed.
-			.setTitle(bold(`${captownname}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
-			.setDescription(italic(`Information about ${captownname}, a Member of ${inNation}, which is also ${peacefullness}`)) // Sets the description of the embed, in italics.
+			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
+			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
-				{ name: '\u200B', value: '\u200B' }, // Blank row
 				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true },
-				{ name: 'Coords:', value: coordinates.replaceAll(/"/g, ""), inline: true },
-				{ name: '\u200B', value: '\u200B' }, // Blank row
+				{ name: 'Nation:', value: nation.replaceAll(/"/g, ""), inline: true },
+		)
+			.addFields(
+				{ name: 'Chunks:', value: chunks, inline: true },
+				{ name: 'Location:', value: coordinates.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
 				{ name: 'Bank:', value: bank.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Upkeep:', value: upkeep.replaceAll(/"/g, ""), inline: true },
-				{ name: '\u200B', value: '\u200B' }, // Blank row
 		)
-			.addField('Residents:', residents.replaceAll(/"/g, "").replaceAll(",", ", "))
-			.addField('\u200B', '\u200B')
+			.addField('Residents:', codeBlock(residents.replaceAll(/"/g, "").replaceAll(",", ", ")))
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
