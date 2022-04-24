@@ -24,7 +24,7 @@ module.exports = {
 
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
-			.setTitle(bold(`${capusername}`))
+			.setTitle(inlineCode(`${capusername}`))
 			.setDescription(inlineCode(`Information about ${capusername}`))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' },
