@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, codeBlock } = require('@discordjs/builders');
+const { SlashCommandBuilder, bold, codeBlock, inlineCode } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
@@ -44,7 +44,7 @@ module.exports = {
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
-				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true },
+				{ name: 'Mayor:', value: inlineCode(mayor.replaceAll(/"/g, "")), inline: true },
 				{ name: 'Nation:', value: capNation.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
