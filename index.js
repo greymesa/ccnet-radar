@@ -18,6 +18,13 @@ for (const file of commandFiles) {
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
+	bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'where am i',
+            type: "ASKING"
+        }
+    });
 });
 
 // Wait and listen for a command, and go through a list to find the command name - then reply
