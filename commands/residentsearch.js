@@ -22,9 +22,17 @@ module.exports = {
         var town = JSON.stringify(compltusername.town)
         var nation = JSON.stringify(compltusername.nation)
 
+		let codedName;
+		if (capusername.includes("_")){
+			codedName = inlineCode(capusername)
+		}
+		else {
+			codedName = capusername
+		}
+
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
-			.setTitle(inlineCode(`${capusername}`))
+			.setTitle(inlineCode(`${codedName}`))
 			.setDescription(inlineCode(`Information about ${capusername}`))
 			.addFields(
 				{ name: '\u200B', value: '\u200B' },
