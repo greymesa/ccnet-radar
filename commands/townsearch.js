@@ -29,7 +29,7 @@ module.exports = {
 		var capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 		var peaceful = JSON.stringify(complttown.peacefulness)
 		var chunks = JSON.stringify(complttown.area)
-		var colourFill = JSON.stringify(complttown.colourCodes.fill)
+		var colourFill = JSON.stringify(complttown.colourCodes.fill).replaceAll(/"/g, "")
 	
 		let peacefullness;
 		if (peaceful == "true"){
