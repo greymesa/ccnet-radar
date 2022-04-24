@@ -39,12 +39,20 @@ module.exports = {
 			peacefullness = "Non-Peaceful"
 		}
 
+		let codedMayor;
+		if (mayor.includes("_")){
+			codedMayor = inlineCode(mayor)
+		}
+		else {
+			codedMayor = mayor
+		}
+
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor(colourFill) // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
-				{ name: 'Mayor:', value: mayor.replaceAll(/"/g, ""), inline: true },
+				{ name: 'Mayor:', value: codedMayor.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Nation:', value: capNation.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
