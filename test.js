@@ -9,14 +9,15 @@
 
 const fetch = require("node-fetch");
 
-async function getKiev() {
+async function getOnlinePlayers() {
 
-var kiev = await fetch("https://shadowevil015.tech/api/v1/towns/kiev").then(res => res.json()).catch(err => { return err })
+    var onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers").then(res => res.json()).catch(err => { return err })
+    
+    onlinePlayers.forEach((player) => {
+       // console.log(player);
+       var stringy =  JSON.stringify(player.name);
+       console.log(stringy);
+    }
+    )};
 
-var stringed = JSON.stringify(kiev.colourCodes.fill)
-
-console.log(stringed)
-
-}
-
-getKiev();
+getOnlinePlayers();
