@@ -30,6 +30,7 @@ module.exports = {
 		var peaceful = JSON.stringify(complttown.peacefulness)
 		var chunks = JSON.stringify(complttown.area)
 		var colourFill = JSON.stringify(complttown.colourCodes.fill).replaceAll(/"/g, "")
+		var inlineMayor = inlineCode(mayor)
 	
 		let peacefullness;
 		if (peaceful == "true"){
@@ -44,7 +45,7 @@ module.exports = {
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
-				{ name: 'Mayor:', value: inlineCode(mayor.replaceAll(/"/g, "")), inline: true },
+				{ name: 'Mayor:', value: inlineMayor.replaceAll(/"/g, ""), inline: true },
 				{ name: 'Nation:', value: capNation.replaceAll(/"/g, ""), inline: true },
 		)
 			.addFields(
