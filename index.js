@@ -18,13 +18,7 @@ for (const file of commandFiles) {
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
-    client.user.setPresence({
-		status: 'online',
-        activity: {
-            name: 'where am i',
-            type: "PLAYING"
-        }
-    });
+	client.user.setActivity('where am i', { type: 'WATCHING' });
 });
 
 // Wait and listen for a command, and go through a list to find the command name - then reply
