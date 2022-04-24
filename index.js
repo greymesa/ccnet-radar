@@ -22,7 +22,7 @@ client.once('ready', () => {
     bot.user.setPresence({
         game: {
             name: 'where am i',
-            type: "ASKING"
+            type: "PLAYING"
         }
     });
 });
