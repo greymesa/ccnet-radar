@@ -29,6 +29,7 @@ module.exports = {
 		var capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
 		var peaceful = JSON.stringify(complttown.peacefulness)
 		var chunks = JSON.stringify(complttown.area)
+		var colourFill = JSON.stringify(complttown.colourCodes.fill)
 	
 		let peacefullness;
 		if (peaceful == "true"){
@@ -39,7 +40,7 @@ module.exports = {
 		}
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
-			.setColor('#EE6123') // Sets the sidebar colour of the embed.
+			.setColor(colourFill) // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
 			.setThumbnail('https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437')
 			.addFields(
