@@ -32,10 +32,10 @@ module.exports = {
 
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
-			.setTitle(inlineCode(`${codedName}`))
+			.setTitlebold((`${codedName}`))
 			.addFields(
-				{ name: 'Town:', value: town.replaceAll(/"/g, ""), inline: true },
-				{ name: 'Nation:', value: nation.replaceAll(/"/g, ""), inline: true },
+				{ name: 'Town:', value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
+				{ name: 'Nation:', value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
 		)
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
