@@ -18,7 +18,7 @@ for (const file of commandFiles) {
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
-    bot.user.setPresence({
+    client.user.setPresence({
 		status: 'online',
         activity: {
             name: 'where am i',
