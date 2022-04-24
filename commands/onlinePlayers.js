@@ -14,6 +14,7 @@ module.exports = {
         onlinePlayers.forEach((player) => {
            var onlinePlayersName =  JSON.stringify(player.name);
 
+           return onlinePlayersName
         }
     )
 
