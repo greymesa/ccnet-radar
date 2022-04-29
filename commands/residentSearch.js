@@ -36,7 +36,7 @@ module.exports = {
 
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
-			.setTitle(bold(`${codedName} | ${rank}`))
+			.setTitle(bold(`${codedName}`))
 			.addFields(
 				{ name: 'Town:', value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
 				{ name: 'Nation:', value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
