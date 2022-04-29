@@ -21,13 +21,14 @@ module.exports = {
 
         var town = JSON.stringify(compltusername.town)
         var nation = JSON.stringify(compltusername.nation)
+		var endpointName = JSON.stringify(compltusername.name)
 
 		let codedName;
-		if (capusername.includes("_")){
-			codedName = inlineCode(capusername)
+		if (endpointName.includes("_")){
+			codedName = inlineCode(endpointName)
 		}
 		else {
-			codedName = capusername
+			codedName = endpointName
 		}
 
 		const resident = new MessageEmbed()
