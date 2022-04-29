@@ -15,7 +15,8 @@ module.exports = {
      var onlinePlayersName
     
         onlinePlayers.forEach((player) => {
-            onlinePlayersName =  JSON.stringify(player.name);
+            onlinePlayersName = []
+            onlinePlayersName.push(JSON.stringify(player.name))
         }
     )
 
