@@ -22,14 +22,16 @@ module.exports = {
         var town = JSON.stringify(compltusername.town)
         var nation = JSON.stringify(compltusername.nation)
 		var endpointName = JSON.stringify(compltusername.name)
+		var capitalisedName = endpointName.replaceAll(/"/g, "")
 
 		let codedName;
-		if (endpointName.includes("_")){
-			codedName = inlineCode(endpointName)
+		if (capitalisedName.includes("_")){
+			codedName = inlineCode(capitalisedName)
 		}
 		else {
-			codedName = endpointName
+			codedName = capitalisedName
 		}
+		
 
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
