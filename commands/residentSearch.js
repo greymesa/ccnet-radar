@@ -15,14 +15,15 @@ module.exports = {
 
 		const username = interaction.options.getString("name");
 
-        var capusername = username.replace(/(^\w|\s\w|\s\_)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase())
-
         var compltusername = await fetch("https://shadowevil015.tech/api/v1/allPlayers/"+username).then(res => res.json()).catch(err => { return err })
 
         var town = JSON.stringify(compltusername.town)
         var nation = JSON.stringify(compltusername.nation)
 		var endpointName = JSON.stringify(compltusername.name)
 		var capitalisedName = endpointName.replaceAll(/"/g, "")
+		var fullRank = JSON.stringify(compltusername.nickname)
+		var rank = fullRank.replaceAll(/"/g, "").split(' '[0])
+
 
 		let codedName;
 		if (capitalisedName.includes("_")){
@@ -35,7 +36,7 @@ module.exports = {
 
 		const resident = new MessageEmbed()
 			.setColor('#EE6123')
-			.setTitle(bold(`${codedName}`))
+			.setTitle(bold(`${codedName} | ${rank}`))
 			.addFields(
 				{ name: 'Town:', value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
 				{ name: 'Nation:', value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
