@@ -36,7 +36,7 @@ module.exports = {
 
     const players4 = []
 
-    if (nations >= 62) {
+    if (nations > 61) {
     players4.push(sortedPlayers.slice(63, 83))}
     else {
         players4.push("\u200B")
