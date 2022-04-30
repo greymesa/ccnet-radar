@@ -4,12 +4,8 @@ const fetch = require('node-fetch');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('resident')
-		.setDescription("Use this command, with a username, to find information about the player.")
-        .addStringOption(option =>
-            option.setName("name")
-                .setDescription("The username of the player.")
-                .setRequired(true)),
+		.setName('fullmap')
+		.setDescription("Use this command to get an image of the dynmap!"),
 
 	async execute(interaction) {
 
