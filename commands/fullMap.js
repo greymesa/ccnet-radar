@@ -19,8 +19,7 @@ module.exports = {
     })
         .then(async (browser) => {
             const page = await browser.newPage();
-            await page.goto("https://map.ccnetmc.com/nationsmap/#world;flat;0,64,0;0"); // Define the url
-            setTimeout(func, 9000)
+            await page.goto("https://map.ccnetmc.com/nationsmap/#world;flat;0,64,0;0").setTimeout(func, 9000); // Define the url
             await page.screenshot({ path: "map.png" }); // Screenshot and save the file as map.png. The path can be configured
             await browser.close(); // Close the headless browser
     });
