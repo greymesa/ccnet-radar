@@ -48,7 +48,7 @@ module.exports = {
 			codedMayor = mayor
 		}
 
-		/*const puppeteer = require("puppeteer");
+		const puppeteer = require("puppeteer");
 		puppeteer
 			.launch({
 				defaultViewport: { // Define the size of the screenshot/headless browser
@@ -62,7 +62,7 @@ module.exports = {
 				await page.waitFor(15000)
 				await page.screenshot({path: `images/${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
 				await browser.close(); // Close the headless browser
-			});*/
+			});
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor(colourFill) // Sets the sidebar colour of the embed.
