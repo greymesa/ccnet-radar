@@ -80,7 +80,7 @@ module.exports = {
 				{ name: 'Upkeep:', value: upkeep.replaceAll(/"/g, ""), inline: true },
 		)
 			.addField('Residents:', codeBlock(residents.replaceAll(/"/g, "").replaceAll(",", ", ")))
-			.addImage(`attachment://${townname}.png`)
+			.setImage(`attachment://${townname}.png`)
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
