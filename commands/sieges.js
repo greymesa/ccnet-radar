@@ -9,7 +9,7 @@ module.exports = {
 
 	async execute(interaction) {
 
-        var sieges = await fetch('https://shadowevil015.tech/api/v1/sieges'.name)
+        var sieges = await fetch('https://shadowevil015.tech/api/v1/sieges')
 
     await interaction.reply({ sieges/*embeds: [onlineplayers]*/ });
         
