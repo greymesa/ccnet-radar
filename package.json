@@ -29,5 +29,8 @@
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
     "puppeteer": "^13.7.0"
+  },
+  "devDependencies": {
+    "compress-images": "^2.0.5"
   }
 }

@@ -36,7 +36,7 @@ module.exports = {
         .setImage('attachment://map.png')
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
 
-            await interaction.reply({ embeds: [map], files: ['./map.png'] });
+            await interaction.reply({ embeds: [map], files: ['images/map.png'] });
 
     },
 };
