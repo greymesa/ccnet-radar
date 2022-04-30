@@ -59,7 +59,7 @@ module.exports = {
 			.then(async (browser) => {
 				const page = await browser.newPage();
 				await page.goto(coordinatesLink); // Define the url
-				await page.waitFor(12000)
+				await page.waitFor(10000)
 				await page.screenshot({path: `images/${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
 				await browser.close(); // Close the headless browser
 			});
@@ -87,7 +87,7 @@ module.exports = {
 
 			await interaction.reply(`gimme a sec`)
 			
-			await wait(12500)
+			await wait(10500)
 
 			await interaction.editReply({ embeds: [town], files: [`images/${townname}.png`] } );
 	},
