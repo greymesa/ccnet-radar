@@ -22,7 +22,7 @@ module.exports = {
 		var endpointName = JSON.stringify(compltusername.name)
 		var capitalisedName = endpointName.replaceAll(/"/g, "")
 		var fullRank = JSON.stringify(compltusername.nickname)
-		var rank = fullRank.replaceAll(/"/g, "").split(' ')[0].replace("[", "").replace("]", "")
+		//var rank = fullRank.replaceAll(/"/g, "").split(' ')[0].replace("[", "").replace("]", "")
 
 
 		let codedName;
