@@ -21,7 +21,6 @@ module.exports = {
     var sortedPlayers = onlinePlayersName.sort(function (a, b) {
             return a.toLowerCase().localeCompare(b.toLowerCase());
         });
-    var allOnlinePlayers = JSON.stringify(sortedPlayers)
 
     const players1 = []
     players1.push(sortedPlayers.slice(0, 20))
