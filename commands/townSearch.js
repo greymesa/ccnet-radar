@@ -85,6 +85,10 @@ module.exports = {
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
 
+			await interaction.deferReply();
+
+			await wait(16000)
+
 			await interaction.reply({ embeds: [town], files: [`images/${townname}.png`] } );
 	},
 };
