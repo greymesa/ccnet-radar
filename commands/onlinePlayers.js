@@ -22,8 +22,6 @@ module.exports = {
             return a.toLowerCase().localeCompare(b.toLowerCase());
         });
 
-    console.log(sortedPlayers)
-
     var serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then(res => res.json()).catch(err => { return err })
 
     var nations = JSON.stringify(serverInfo.nations)
