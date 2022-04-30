@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, bold, codeBlock, inlineCode } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
+const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
 	data: new SlashCommandBuilder()
