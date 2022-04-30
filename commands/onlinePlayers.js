@@ -45,9 +45,6 @@ module.exports = {
             { name: 'Online Players:', value: inlineCode(players1).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
             { name: '\u200B', value: inlineCode(players2).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
             { name: '\u200B', value: inlineCode(players3).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
-            { name: '\u200B', value: inlineCode(players4).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
-            { name: '\u200B', value: inlineCode(players5).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
-            { name: '\u200B', value: inlineCode(players6).replaceAll(/"/g, "").replaceAll(/,/g, "\n").replace(/]/g, "").replace("[", ""), inline: true },
     )
         .setTimestamp()
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
