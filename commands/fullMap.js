@@ -24,24 +24,9 @@ module.exports = {
             await browser.close(); // Close the headless browser
     });
 
-    (async () => {
-      const files = await imagemin(["images/*.{png}"], {
-        destination: "images",
-        plugins: [
-          imageminPngquant({
-            quality: [0.6, 0.8]
-          })
-        ]
-      });
-})();
-
         const map = new MessageEmbed()
         .setColor('#EE6123')
         .setTitle(bold(`Nations Map`))
-       /* .addFields(
-        { name: 'Town:', value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
-        { name: 'Nation:', value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
-        )*/
         .setTimestamp()
         .setImage('attachment://map.png')
         .setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
