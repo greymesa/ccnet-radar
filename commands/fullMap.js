@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, bold, inlineCode } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const fetch = require('node-fetch');
+const imagemin = import('imagemin')
+const imageminPngquant = import('imagemin-pngquant')
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -24,9 +25,6 @@ module.exports = {
             await page.screenshot({ path: "map.png" }); // Screenshot and save the file as map.png. The path can be configured
             await browser.close(); // Close the headless browser
     });
-    
-    const imagemin = require("imagemin");
-    const imageminPngquant = require("imagemin-pngquant");
 
     (async () => {
       const files = await imagemin(["images/*.{png}"], {
