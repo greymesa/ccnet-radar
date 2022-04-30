@@ -1,7 +1,5 @@
 const { SlashCommandBuilder, bold, inlineCode } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const imagemin = import('imagemin')
-const imageminPngquant = import('imagemin-pngquant')
 
 module.exports = {
 	data: new SlashCommandBuilder()
