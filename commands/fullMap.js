@@ -25,6 +25,20 @@ module.exports = {
             await browser.close(); // Close the headless browser
     });
 
+    const imagemin = require("imagemin");
+    const imageminPngquant = require("imagemin-pngquant");
+    
+    (async () => {
+      const files = await imagemin(["images/*.{png}"], {
+        destination: "images",
+        plugins: [
+          imageminPngquant({
+            quality: [0.6, 0.8]
+          })
+        ]
+      });
+})();
+
         const map = new MessageEmbed()
         .setColor('#EE6123')
         .setTitle(bold(`Nations Map`))
