@@ -27,6 +27,7 @@
     "discord.js": "^13.6.0",
     "minecraft-server-util": "^5.2.9",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.7.0"
   }
 }
