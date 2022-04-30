@@ -47,6 +47,22 @@ module.exports = {
 			codedMayor = mayor
 		}
 
+		const puppeteer = require("puppeteer");
+		puppeteer
+			.launch({
+				defaultViewport: { // Define the size of the screenshot/headless browser
+					width: 500,
+					height: 500,
+				},
+			})
+			.then(async (browser) => {
+				const page = await browser.newPage();
+				await page.goto(coordinatesLink); // Define the url
+				await page.waitFor(15000)
+				await page.screenshot({path: `${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
+				await browser.close(); // Close the headless browser
+			});
+
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor(colourFill) // Sets the sidebar colour of the embed.
 			.setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
@@ -64,9 +80,10 @@ module.exports = {
 				{ name: 'Upkeep:', value: upkeep.replaceAll(/"/g, ""), inline: true },
 		)
 			.addField('Residents:', codeBlock(residents.replaceAll(/"/g, "").replaceAll(",", ", ")))
+			.addImage(`attachment://${townname}.png`)
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
-			await interaction.reply({ embeds: [town] });
+			await interaction.reply({ embeds: [town], files: [`images/${townname}.png`] } );
 	},
 };
