@@ -47,12 +47,12 @@ module.exports = {
 			codedMayor = mayor
 		}
 
-		const puppeteer = require("puppeteer");
+		/*const puppeteer = require("puppeteer");
 		puppeteer
 			.launch({
 				defaultViewport: { // Define the size of the screenshot/headless browser
-					width: 500,
-					height: 500,
+					width: 600,
+					height: 600,
 				},
 			})
 			.then(async (browser) => {
@@ -61,7 +61,7 @@ module.exports = {
 				await page.waitFor(15000)
 				await page.screenshot({path: `images/${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
 				await browser.close(); // Close the headless browser
-			});
+			});*/
 
 		const town = new MessageEmbed() // Create a message embed, called capital.
 			.setColor(colourFill) // Sets the sidebar colour of the embed.
@@ -84,6 +84,10 @@ module.exports = {
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
         
-			await interaction.reply({ embeds: [town], files: [`images/${townname}.png`] } );
+			await interaction.deferReply();
+
+			await wait(5000);
+
+			await interaction.editReply({ embeds: [town], files: [`images/${townname}.png`] } );
 	},
 };
