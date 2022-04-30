@@ -22,6 +22,8 @@ module.exports = {
             return a.toLowerCase().localeCompare(b.toLowerCase());
         });
 
+    console.log(sortedPlayers)
+
     const players1 = []
     players1.push(sortedPlayers.slice(0, 20))
 
