@@ -27,7 +27,7 @@ module.exports = {
 
         const map = new MessageEmbed()
         .setColor('#EE6123')
-        .setTitle(bold(`placeholder`))
+        .setTitle(bold(`Nations Map`))
        /* .addFields(
         { name: 'Town:', value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
         { name: 'Nation:', value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
