@@ -29,38 +29,14 @@ module.exports = {
     var nations = JSON.stringify(serverInfo.nations)
 
     const players1 = []
-    players1.push(sortedPlayers.slice(0, 20))
+    players1.push(sortedPlayers.slice(0, 37))
 
     const players2 = []
-    players2.push(sortedPlayers.slice(21, 41))
+    players2.push(sortedPlayers.slice(38, 75))
 
     const players3 = []
     
-    players3.push(sortedPlayers.slice(42, 62))
-
-    const players4 = []
-
-    if (nations > 61) {
-    players4.push(sortedPlayers.slice(63, 83))}
-    else {
-        players4.push("\u200B")
-    }
-
-    const players5 = []
-
-    if (nations >= 83) {
-    players5.push(sortedPlayers.slice(84, 104))}
-    else {
-        players5.push("\u200B")
-    }
-
-    const players6 = []
-
-    if (nations >= 104) {
-    players6.push(sortedPlayers.slice(105, 125))}
-    else {
-        players6.push("\u200B")
-    }
+    players3.push(sortedPlayers.slice(76, 113))
 
        const onlineplayers = new MessageEmbed() // Create a message embed
         .setColor('#EE6123') // Sets the sidebar colour of the embed.
