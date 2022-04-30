@@ -59,7 +59,7 @@ module.exports = {
 				const page = await browser.newPage();
 				await page.goto(coordinatesLink); // Define the url
 				await page.waitFor(15000)
-				await page.screenshot({path: `${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
+				await page.screenshot({path: `images/${townname}.png`}); // Screenshot and save the file as map.png. The path can be configured
 				await browser.close(); // Close the headless browser
 			});
 

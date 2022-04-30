@@ -21,7 +21,7 @@ module.exports = {
 				await page.goto("https://map.ccnetmc.com/nationsmap/#world;flat;0,64,0;0"); // Define the url
 				await page.waitFor(15000)
 				await page.screenshot({
-					path: "map.png"
+					path: "images/map.png"
 				}); // Screenshot and save the file as map.png. The path can be configured
 				await browser.close(); // Close the headless browser
 			});
@@ -37,8 +37,7 @@ module.exports = {
 			});
 
 		await interaction.reply({
-			embeds: [map],
-			files: ['images/map.png']
+			embeds: [map], files: ['images/map.png']
 		});
 
 	},
