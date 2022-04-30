@@ -85,7 +85,7 @@ module.exports = {
 			.setTimestamp()
 			.setFooter({ text: 'Bot written by Shadowevil015', iconURL: 'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437' });
 
-			await interaction.reply({ content: `gimme a sec`, ephemeral: true });
+			await interaction.reply(`gimme a sec`);
 			
 			await wait(7500);
 
