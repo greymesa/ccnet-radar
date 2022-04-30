@@ -24,6 +24,10 @@ module.exports = {
 
     console.log(sortedPlayers)
 
+    var serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then(res => res.json()).catch(err => { return err })
+
+    var nations = JSON.stringify(serverInfo.nations)
+
     const players1 = []
     players1.push(sortedPlayers.slice(0, 20))
 
@@ -57,12 +61,6 @@ module.exports = {
     else {
         players6.push("\u200B")
     }
-
-    var serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then(res => res.json()).catch(err => { return err })
-
-    var nations = JSON.stringify(serverInfo.nations)
-
-
 
        const onlineplayers = new MessageEmbed() // Create a message embed
         .setColor('#EE6123') // Sets the sidebar colour of the embed.
