@@ -13,8 +13,8 @@ module.exports = {
         puppeteer
          .launch({ 
           defaultViewport: {    // Define the size of the screenshot/headless browser
-            width: 2560,
-            height: 1440,
+            width: 1920,
+            height: 1080,
         },
     })
         .then(async (browser) => {
