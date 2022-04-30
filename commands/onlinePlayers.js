@@ -9,7 +9,7 @@ module.exports = {
 
 	async execute(interaction) {
 
-        var onlinePlayers = await fetch("http://150.230.121.30/api/v1/onlinePlayers").then(res => res.json()).catch(err => { return err })
+        var onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err })
 
      var onlinePlayersName = []
 
