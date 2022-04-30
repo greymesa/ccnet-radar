@@ -86,7 +86,7 @@ module.exports = {
         
 			await interaction.deferReply();
 
-			await wait(5000);
+			await wait(10000);
 
 			await interaction.editReply({ embeds: [town], files: [`images/${townname}.png`] } );
 	},
