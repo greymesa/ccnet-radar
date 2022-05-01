@@ -32,10 +32,18 @@ module.exports = {
     var shopsList = [];
 
     shops.forEach((shop) => {
-      shopsList.push(shop.item);
+      shopsList.push(shop);
     });
 
-    var strShops = JSON.stringify(shopsList);
+    var shopsItem = [];
+
+    shopsList.forEach((shopItems) => {
+      if (shopItems.item.includes(selectedItem)) {
+        shopsItem.push(siegeItems.item);
+      }
+    });
+
+    var strItem = JSON.stringify(shopsItem);
 
         /*const siege = new MessageEmbed()
         .setColor("#EE6123")
@@ -53,6 +61,6 @@ module.exports = {
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});*/
 
-            await interaction.reply(strShops);
+            await interaction.reply(strItem);
 },
 };
