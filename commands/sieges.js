@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('sieges')
-		.setDescription("Use this command to see a list of online players on Nations!"),
+		.setDescription("Use this command to see a list of all sieges on Nations!"),
 
 	async execute(interaction) {
 
