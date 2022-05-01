@@ -43,15 +43,39 @@ module.exports = {
       }
     });
 
-    var strItem = JSON.stringify(shopsItem);
+    var shopStock = [];
 
-        const shopping = new MessageEmbed()
+    shopsList.forEach((shop) => {
+        if (shop.item.includes(selectedItem)) {
+          shopStock.push(shop.stock);
+        }
+      });
+
+    var shopOwner = [];
+
+    shopsList.forEach((shop) => {
+        if (shop.item.includes(selectedItem)) {
+          shopOwner.push(shop.owner);
+        }
+      });
+
+    var strItem = JSON.stringify(shopsItem);
+    var strOwner = JSON.stringify(shopOwner);
+    var strStock = JSON.stringify(shopStock);
+
+    let shopStatus;
+    if (interaction.options.getSubcommand() === "buying") {
+        shopStatus = "Buying"; }
+    else if (interaction.options.getSubcommand() === "selling") {
+        shopStatus = "Selling"; }
+
+        const buyshop = new MessageEmbed()
         .setColor("#EE6123")
-        .setTitle(bold(`Shops`))
+        .setTitle(bold(`${shopStatus}`))
         .addFields(
           {name: "Item:", value: strItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-          //{name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-          //{name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+          {name: "Stock:", value: strStock.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+          {name: "Owner:", value: strOwner.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
         )
      /*   .addFields(
           {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
@@ -61,6 +85,8 @@ module.exports = {
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 
-            await interaction.reply( { embeds: [shopping] } );
-},
-};
+        if (interaction.options.getSubcommand() === "buying") {
+            await interaction.reply({ embeds: [buyshop] });
+          } else if (interaction.options.getSubcommand() === "selling") {
+            await interaction.reply({ embeds: [sellshop] })};
+}};
