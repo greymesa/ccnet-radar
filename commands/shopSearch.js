@@ -39,7 +39,7 @@ module.exports = {
 
     shopsList.forEach((shopItems) => {
       if (shopItems.item.includes(selectedItem)) {
-        shopsItem.push(siegeItems.item);
+        shopsItem.push(shopItems.item);
       }
     });
 
