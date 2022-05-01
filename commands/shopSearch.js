@@ -43,11 +43,15 @@ module.exports = {
       }
     });
 
-    var shopStock = [];
+    var shopBuyingStock = [];
+    var shopSellingStock = [];
 
     shopsList.forEach((shop) => {
-        if (shop.item.includes(selectedItem)) {
-          shopStock.push(shop.stock);
+        if (shop.item.includes(selectedItem) && interaction.options.getSubcommand() === "buying") {
+          shopBuyingStock.push(shop.stock);
+        }
+        else {
+            shopSellingStock.push(shop.stock);
         }
       });
 
