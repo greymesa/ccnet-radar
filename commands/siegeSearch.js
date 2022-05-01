@@ -27,11 +27,7 @@ module.exports = {
 
     const siegeName = splitSiegeName.join("_");
 
-    var sieges = await fetch("https://shadowevil015.tech/api/v1/sieges")
-      .then((res) => res.json())
-      .catch((err) => {
-        return err;
-      });
+    var sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
 
     var siegeList = [];
 
@@ -88,10 +84,7 @@ module.exports = {
     });
 
     var strNames = JSON.stringify(siegeNameList);
-    var nameTitle = strNames
-      .replaceAll(/"|]/g, "")
-      .replaceAll(/_/g, " ")
-      .replace("[", "");
+    var nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
     var strTown = JSON.stringify(siegeTown);
     var strType = JSON.stringify(siegeType);
     var strPoints = JSON.stringify(siegePoints);
@@ -109,60 +102,17 @@ module.exports = {
       .setColor("#EE6123")
       .setTitle(bold(`${nameTitle}`))
       .addFields(
-        {
-          name: "Besieged Town:",
-          value: strTown
-            .replaceAll(/"|]|/g, "")
-            .replaceAll(/_/g, " ")
-            .replaceAll(/,/g, "\n\n")
-            .replace("[", ""),
-          inline: true,
-        },
-        {
-          name: "Type:",
-          value: strType
-            .replaceAll(/"|]|/g, "")
-            .replaceAll(/_/g, " ")
-            .replaceAll(/,/g, "\n\n")
-            .replace("[", ""),
-          inline: true,
-        },
-        {
-          name: "Points:",
-          value: strPoints
-            .replaceAll(/"|]|/g, "")
-            .replaceAll(/_/g, " ")
-            .replaceAll(/,/g, "\n\n")
-            .replace("[", ""),
-          inline: true,
-        }
+        {name: "Besieged Town:", value: strTown.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+        {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+        {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
       )
       .addFields(
-        {
-          name: "Time Left:",
-          value: strTime
-            .replaceAll(/"|]|/g, "")
-            .replaceAll(/_/g, " ")
-            .replaceAll(/,/g, "\n\n")
-            .replace("[", ""),
-          inline: true,
-        },
-        {
-          name: "War Chest:",
-          value: strWarChest
-            .replaceAll(/"|]|/g, "")
-            .replaceAll(/_/g, " ")
-            .replace("[", ""),
-          inline: true,
-        },
+        {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+        {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
         { name: "Status:", value: siegeStatus, inline: true }
       )
       .setTimestamp()
-      .setFooter({
-        text: "Bot written by Shadowevil015",
-        iconURL:
-          "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
-      });
+      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 
     await interaction.reply({ embeds: [siege] });
   },

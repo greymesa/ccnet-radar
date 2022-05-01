@@ -60,11 +60,15 @@ module.exports = {
     )
 
     .addSubcommand((subcommand) =>
-      subcommand.setName("voting").setDescription("A link to the Voting Guide!")
+      subcommand
+        .setName("voting")
+        .setDescription("A link to the Voting Guide!")
     )
 
     .addSubcommand((subcommand) =>
-      subcommand.setName("link").setDescription("A link to the Wiki Homepage!")
+      subcommand
+        .setName("link")
+        .setDescription("A link to the Wiki Homepage!")
     ),
 
   async execute(interaction) {
