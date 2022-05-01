@@ -45,7 +45,7 @@ module.exports = {
 
     var strItem = JSON.stringify(shopsItem);
 
-        /*const siege = new MessageEmbed()
+        const shopping = new MessageEmbed()
         .setColor("#EE6123")
         .setTitle(bold(`${nameTitle}`))
         .addFields(
@@ -59,8 +59,8 @@ module.exports = {
           {name: "Status:", value: siegeStatus, inline: true }
         )
         .setTimestamp()
-        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});*/
+        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 
-            await interaction.reply(strItem);
+            await interaction.reply( { embeds: [shopping] } );
 },
 };
