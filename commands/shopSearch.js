@@ -47,7 +47,7 @@ module.exports = {
 
         const shopping = new MessageEmbed()
         .setColor("#EE6123")
-        .setTitle(bold(`${nameTitle}`))
+        .setTitle(bold(`Shops`))
         .addFields(
           {name: "Item:", value: strItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
           //{name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
