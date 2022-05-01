@@ -15,7 +15,7 @@ module.exports = {
         var siegeList = []
 
         sieges.forEach((siege) => {
-            siegeList.push(siege).split(`,`)
+            siegeList.push(siege).split(`}`)
         }
     )
 
