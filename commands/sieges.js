@@ -75,6 +75,9 @@ module.exports = {
           "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
       });
 
-    await interaction.reply({ embeds: [siege] })
+      if (siegeList.length == 0) {
+        await interaction.reply("There are no sieges currently!")}
+      else {
+        await interaction.reply({ embeds: [siege] })}
   },
 };
