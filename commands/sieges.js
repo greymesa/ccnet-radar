@@ -36,6 +36,9 @@ module.exports = {
     var strtimes = JSON.stringify(siegeTimeList);
     var strbalances = JSON.stringify(siegeBalanceList);
 
+    if (siegeList.length == 0) {
+    }
+    else {
     const siege = new MessageEmbed()
       .setColor("#EE6123")
       .setTitle(bold(`Current Sieges`))
@@ -73,7 +76,7 @@ module.exports = {
         text: "Bot written by Shadowevil015",
         iconURL:
           "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
-      });
+      });}
 
       if (siegeList.length == 0) {
         await interaction.reply("There are no sieges currently!")}
