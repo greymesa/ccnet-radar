@@ -54,11 +54,9 @@ module.exports = {
       .setTitle(bold("What is the IP?"))
       .setDescription(italic("You can use the following IPs to join CCNet:"))
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         { name: "Europe:", value: inlineCode("play.ccnetmc.com") },
         { name: "NA:", value: inlineCode("na.ccnetmc.com") },
         { name: "Asia:", value: inlineCode("asia.ccnetmc.com") },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -72,12 +70,10 @@ module.exports = {
       .setTitle(bold("Wiki"))
       .setDescription(italic("You can view the wiki via this link:"))
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         {
           name: "Link:",
           value: "[https://www.wiki.ccnetmc.com](https://www.wiki.ccnetmc.com)",
         },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -93,13 +89,11 @@ module.exports = {
         italic("You can download the resource pack via this link:")
       )
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         {
           name: "Link:",
           value:
             "[https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1](https://www.dropbox.com/s/312j10m4cw611au/CCNet.zip?dl=1)",
         },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -113,12 +107,10 @@ module.exports = {
       .setTitle(bold("Dynmap"))
       .setDescription(italic("You can view the Dynmap via this link:"))
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         {
           name: "Link:",
           value: "[https://www.map.ccnetmc.com](https://www.map.ccnetmc.com)",
         },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -131,7 +123,6 @@ module.exports = {
       .setColor("#EE6123")
       .setTitle(bold("How Do I Send Logs?"))
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         {
           name: "Follow these instructions to get your logs:",
           value: `
@@ -146,7 +137,6 @@ module.exports = {
                 
                 4) Send the information in the ticket, along with the log file for verification if needed.`,
         },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -159,7 +149,6 @@ module.exports = {
       .setColor("#EE6123")
       .setTitle(bold("What should you do if a server goes down?"))
       .addFields(
-        { name: "\u200B", value: "\u200B" },
         {
           name: "One of the servers is down, now what?",
           value: `
@@ -174,7 +163,6 @@ module.exports = {
                 
                 `,
         },
-        { name: "\u200B", value: "\u200B" }
       )
       .setTimestamp()
       .setFooter({
@@ -195,7 +183,7 @@ module.exports = {
         {
           name: "\u200B",
           value:
-            "Note: You will need to create an account to make a ban appeal.",
+            bold("Note: You will need to create an account to make a ban appeal."),
         }
       )
       .setTimestamp()
@@ -206,19 +194,25 @@ module.exports = {
       });
 
     if (interaction.options.getSubcommand() === "ip") {
-      await interaction.reply({ embeds: [ip] });
-    } else if (interaction.options.getSubcommand() === "wiki") {
-      await interaction.reply({ embeds: [wiki] });
-    } else if (interaction.options.getSubcommand() === "resourcepack") {
-      await interaction.reply({ embeds: [resourcepack] });
-    } else if (interaction.options.getSubcommand() === "map") {
-      await interaction.reply({ embeds: [map] });
-    } else if (interaction.options.getSubcommand() === "logs") {
-      await interaction.reply({ embeds: [logs] });
-    } else if (interaction.options.getSubcommand() === "reboot") {
-      await interaction.reply({ embeds: [reboot] });
-    } else if (interaction.options.getSubcommand() === "appeal") {
-      await interaction.reply({ embeds: [appeal] });
+      await interaction.reply({ embeds: [ip] })} 
+      
+    else if (interaction.options.getSubcommand() === "wiki") {
+      await interaction.reply({ embeds: [wiki] })} 
+      
+    else if (interaction.options.getSubcommand() === "resourcepack") {
+      await interaction.reply({ embeds: [resourcepack] })}
+
+    else if (interaction.options.getSubcommand() === "map") {
+      await interaction.reply({ embeds: [map] })}
+
+    else if (interaction.options.getSubcommand() === "logs") {
+      await interaction.reply({ embeds: [logs] })}
+
+    else if (interaction.options.getSubcommand() === "reboot") {
+      await interaction.reply({ embeds: [reboot] })}
+
+    else if (interaction.options.getSubcommand() === "appeal") {
+      await interaction.reply({ embeds: [appeal] })
     }
   },
 };
