@@ -35,19 +35,23 @@ module.exports = {
       shopsList.push(shop);
     });
 
-    var shopsItem = [];
+    var shopBuyingItem = [];
+    var shopSellingItem = [];
 
-    shopsList.forEach((shopItems) => {
-      if (shopItems.item.includes(selectedItem)) {
-        shopsItem.push(shopItems.item);
-      }
-    });
+    shopsList.forEach((shop) => {
+        if (shop.item.includes(selectedItem) && shop.type.includes("Buying")) {
+          shopBuyingItem.push(shop.item);
+        }
+        else {
+            shopSellingItem.push(shop.item);
+        }
+      });
 
     var shopBuyingStock = [];
     var shopSellingStock = [];
 
     shopsList.forEach((shop) => {
-        if (shop.item.includes(selectedItem) && interaction.options.getSubcommand() === "buying") {
+        if (shop.item.includes(selectedItem) && shop.type.includes("Buying")) {
           shopBuyingStock.push(shop.stock);
         }
         else {
@@ -55,17 +59,8 @@ module.exports = {
         }
       });
 
-    var shopOwner = [];
-
-    shopsList.forEach((shop) => {
-        if (shop.item.includes(selectedItem)) {
-          shopOwner.push(shop.owner);
-        }
-      });
-
-    var strItem = JSON.stringify(shopsItem);
-    var strOwner = JSON.stringify(shopOwner);
-    var strStock = JSON.stringify(shopStock);
+    var strItem = JSON.stringify(ShopBuyingItem);
+    var strStock = JSON.stringify(ShopBuyingStock);
 
     let shopStatus;
     if (interaction.options.getSubcommand() === "buying") {
@@ -79,7 +74,7 @@ module.exports = {
         .addFields(
           {name: "Item:", value: strItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
           {name: "Stock:", value: strStock.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-          {name: "Owner:", value: strOwner.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+         // {name: "Owner:", value: strOwner.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
         )
      /*   .addFields(
           {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
