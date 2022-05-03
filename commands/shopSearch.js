@@ -25,42 +25,83 @@ module.exports = {
 
   async execute(interaction) {
 
-    const selectedItem = interaction.options.getString("name");
+    const fullItem = interaction.options.getString("name");
+
+    const splitItemName = fullItem.split(" ");
+
+    for (var i = 0; i < splitItemName.length; i++) {
+      splitItemName[i] =
+        splitItemName[i].charAt(0).toUpperCase() + splitItemName[i].slice(1);
+    }
+
+    const selectedItem = splitItemName.join(" ");
 
     var shops = await fetch("https://shadowevil015.tech/api/v1/shops").then((res) => res.json()).catch((err) => {return err;});
 
-    var shopsList = [];
+    var buyingShopsList = [];
+    var sellingShopsList = [];
 
     shops.forEach((shop) => {
-      shopsList.push(shop);
-    });
+      if (shop.type === "Buying") {
+        buyingShopsList.push(shop)
+      }
+      else if (shop.type === "Selling") {
+        sellingShopsList.push(shop)
+      }});
 
     var shopBuyingItem = [];
     var shopSellingItem = [];
 
-    shopsList.forEach((shop) => {
-        if (shop.item.includes(selectedItem) && shop.type.includes("Buying")) {
-          shopBuyingItem.push(shop.item);
-        }
-        else {
-            shopSellingItem.push(shop.item);
-        }
-      });
+    buyingShopsList.forEach((shop) => {
+      if (shop.item === selectedItem) {
+          shopBuyingItem.push(shop.item)}});
+
+    sellingShopsList.forEach((shop) => {
+      if (shop.item === selectedItem) {
+          shopSellingItem.push(shop.item)}});
 
     var shopBuyingStock = [];
     var shopSellingStock = [];
 
-    shopsList.forEach((shop) => {
-        if (shop.item.includes(selectedItem) && shop.type.includes("Buying")) {
-          shopBuyingStock.push(shop.stock);
-        }
-        else {
-            shopSellingStock.push(shop.stock);
-        }
-      });
+    buyingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+          shopBuyingStock.push(shop.stock)}});
 
-    var strItem = JSON.stringify(ShopBuyingItem);
-    var strStock = JSON.stringify(ShopBuyingStock);
+    sellingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+          shopSellingStock.push(shop.stock)}});
+
+    var shopBuyingPriceStock = [];
+    var shopSellingPriceStock = [];
+
+    buyingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+        var dollardollarbill = `$`
+        shopBuyingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))}});
+
+    sellingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+        var dollardollarbill = `$`
+        shopSellingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))}});
+
+    var shopBuyingCoords = [];
+    var shopSellingCoords = [];
+
+    buyingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+          shopBuyingCoords.push(shop.coords)}});
+
+    sellingShopsList.forEach((shop) => {
+        if (shop.item === selectedItem) {
+          shopSellingCoords.push(shop.coords)}});
+
+    var strBuyItem = JSON.stringify(shopBuyingItem);
+    var strBuyPrice = JSON.stringify(shopBuyingPriceStock);
+    var strBuyCoords = JSON.stringify(shopBuyingCoords);
+
+    var strSellItem = JSON.stringify(shopSellingItem);
+    var strSellPrice = JSON.stringify(shopSellingPriceStock);
+    var strSellCoords = JSON.stringify(shopSellingCoords);
 
     let shopStatus;
     if (interaction.options.getSubcommand() === "buying") {
@@ -70,17 +111,23 @@ module.exports = {
 
         const buyshop = new MessageEmbed()
         .setColor("#EE6123")
-        .setTitle(bold(`${shopStatus}`))
+        .setTitle(bold(`${shopStatus} | ${selectedItem}`))
         .addFields(
-          {name: "Item:", value: strItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-          {name: "Stock:", value: strStock.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-         // {name: "Owner:", value: strOwner.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+          {name: "Item:", value: strBuyItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+          {name: "Price:\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0Stock:", value: strBuyPrice.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+          {name: "Location:", value: strBuyCoords.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replaceAll("+", ", ").replace("[", ""), inline: true },
         )
-     /*   .addFields(
-          {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-          {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
-          {name: "Status:", value: siegeStatus, inline: true }
-        )*/
+        .setTimestamp()
+        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
+
+        const sellshop = new MessageEmbed()
+        .setColor("#EE6123")
+        .setTitle(bold(`${shopStatus} | ${selectedItem}`))
+        .addFields(
+          {name: "Item:", value: strSellItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+          {name: "Price:\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0Stock:", value: strSellPrice.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+          {name: "Location:", value: strSellCoords.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replaceAll("+", ", ").replace("[", ""), inline: true },
+        )
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 
