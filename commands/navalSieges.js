@@ -39,7 +39,7 @@ module.exports = {
         .setColor("#EE6123")
         .setTitle(bold(`Naval Sieges`))
         .addFields(
-            {name: "\u200B", value: strName.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+            {name: "\u200B", value: strName.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", "").trim(), inline: true },
             {name: "\u200B", value: strControl.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
             {name: "\u200B", value: navalLinks, inline: true }
         )
