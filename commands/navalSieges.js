@@ -31,8 +31,8 @@ module.exports = {
 
     var strName = JSON.stringify(navalSiegeName);
     var strControl = JSON.stringify(navalSiegeController);
-    var navalLinks = `[Link](https://map.ccnetmc.com/nationsmap/#world;flat;2212,64,-4208;3)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;241,64,-2861;4)\n\n
-                      [Link](https://map.ccnetmc.com/nationsmap/#world;flat;-5328,64,-4600;2)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;17172,64,-1888;3)\n\n
+    var navalLinks = `[Link](https://map.ccnetmc.com/nationsmap/#world;flat;2212,64,-4208;3)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;241,64,-2861;4)\n
+                      [Link](https://map.ccnetmc.com/nationsmap/#world;flat;-5328,64,-4600;2)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;17172,64,-1888;3)\n
                       [Link](https://map.ccnetmc.com/nationsmap/#world;flat;7548,64,-1296;2)`
 
     const navalsieges = new MessageEmbed()
