@@ -39,9 +39,9 @@ module.exports = {
         .setColor("#EE6123")
         .setTitle(bold(`Naval Sieges`))
         .addFields(
-            {name: "Siege Region:", value: strName.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-            {name: "Controlled By:", value: strControl.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
-            {name: "Location:", value: navalLinks, inline: true }
+            {name: "\u200B", value: strName.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+            {name: "\u200B", value: strControl.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+            {name: "\u200B", value: navalLinks, inline: true }
         )
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
