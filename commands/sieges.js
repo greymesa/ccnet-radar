@@ -75,6 +75,6 @@ module.exports = {
           "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
       });
 
-    await interaction.reply({ embeds: [siege] });
+    await interaction.reply({ embeds: [siege] })
   },
 };

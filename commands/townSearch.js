@@ -1,11 +1,7 @@
-const {
-  SlashCommandBuilder,
-  bold,
-  codeBlock,
-  inlineCode,
-} = require("@discordjs/builders");
+const { SlashCommandBuilder, bold, codeBlock, inlineCode } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
+var fn = require("../functions.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -56,19 +52,19 @@ module.exports = {
       .setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
       .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
       .addFields(
-        {name: "Mayor:", value: codedMayor.replaceAll(/"/g, ""), inline: true,},
-        { name: "Nation:", value: capNation.replaceAll(/"/g, ""), inline: true }
+        {name: "Mayor:", value: fn.removeStyleCharacters(codedMayor), inline: true,},
+        { name: "Nation:", value: fn.removeStyleCharacters(capNation), inline: true }
       )
       .addFields(
         { name: "Chunks:", value: chunks, inline: true },
         {name: "Location:", value: `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""), inline: true }
       )
       .addFields(
-        { name: "Bank:", value: bank.replaceAll(/"/g, ""), inline: true },
-        { name: "Upkeep:", value: upkeep.replaceAll(/"/g, ""), inline: true }
+        { name: "Bank:", value: fn.removeStyleCharacters(bank), inline: true },
+        { name: "Upkeep:", value: fn.removeStyleCharacters(upkeep), inline: true }
       )
       .addField(
-        "Residents:", codeBlock(residents.replaceAll(/"/g, "").replaceAll(",", ", "))
+        "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", ")))
       )
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});

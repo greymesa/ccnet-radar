@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, bold } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
+var fn = require("../functions.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -102,7 +103,7 @@ module.exports = {
       .setColor("#EE6123")
       .setTitle(bold(`${nameTitle}`))
       .addFields(
-        {name: "Besieged Town:", value: strTown.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+        {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
         {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
         {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
       )
