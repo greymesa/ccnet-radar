@@ -30,6 +30,12 @@ module.exports = {
         return err;
       });
 
+    const resident = new MessageEmbed()
+
+    if (compltusername === "That player does not exist!") {
+    }
+    else {
+
     var town = JSON.stringify(compltusername.town);
     var nation = JSON.stringify(compltusername.nation);
     var endpointName = JSON.stringify(compltusername.name);
@@ -44,8 +50,7 @@ module.exports = {
       codedName = capitalisedName;
     }
 
-    const resident = new MessageEmbed()
-      .setColor("#EE6123")
+      resident.setColor("#EE6123")
       .setTitle(bold(`${codedName}`))
       .addFields(
         {
@@ -63,9 +68,11 @@ module.exports = {
       .setFooter({
         text: "Bot written by Shadowevil015",
         iconURL:
-          "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
-      });
-
-    await interaction.reply({ embeds: [resident] });
-  },
-};
+          "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"})}
+    
+    if (compltusername === "That player does not exist!") {
+      await interaction.reply("I can't find this player! Are you sure you spelt their name correctly?")}
+    else {
+      await interaction.reply({ embeds: [resident] })}
+    }
+  }

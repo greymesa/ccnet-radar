@@ -110,7 +110,13 @@ module.exports = {
         shopStatus = "Selling"; }
 
         const buyshop = new MessageEmbed()
-        .setColor("#EE6123")
+        const sellshop = new MessageEmbed()
+
+        if (buyingShopsList.length === 0) {
+        }
+        else {
+
+        buyshop.setColor("#EE6123")
         .setTitle(bold(`${shopStatus} | ${selectedItem}`))
         .addFields(
           {name: "Item:", value: strBuyItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
@@ -118,10 +124,14 @@ module.exports = {
           {name: "Location:", value: strBuyCoords.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replaceAll("+", ", ").replace("[", ""), inline: true },
         )
         .setTimestamp()
-        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
+        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});}
 
-        const sellshop = new MessageEmbed()
-        .setColor("#EE6123")
+        if (sellingShopsList.length === 0) {
+        }
+        else {
+
+
+        sellshop.setColor("#EE6123")
         .setTitle(bold(`${shopStatus} | ${selectedItem}`))
         .addFields(
           {name: "Item:", value: strSellItem.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
@@ -129,7 +139,7 @@ module.exports = {
           {name: "Location:", value: strSellCoords.replaceAll(/"|]|/g, "").replaceAll(/,/g, "\n\n").replaceAll("+", ", ").replace("[", ""), inline: true },
         )
         .setTimestamp()
-        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
+        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});}
 
         if (interaction.options.getSubcommand() === "buying") {
             await interaction.reply({ embeds: [buyshop] });

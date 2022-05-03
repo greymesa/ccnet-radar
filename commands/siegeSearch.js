@@ -30,6 +30,12 @@ module.exports = {
 
     var sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
 
+    const siege = new MessageEmbed()
+
+    if (sieges.length == 0) {
+    }
+    else {
+
     var siegeList = [];
 
     sieges.forEach((siege) => {
@@ -99,8 +105,7 @@ module.exports = {
       siegeStatus = "Attacker Lead";
     }
 
-    const siege = new MessageEmbed()
-      .setColor("#EE6123")
+      siege.setColor("#EE6123")
       .setTitle(bold(`${nameTitle}`))
       .addFields(
         {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -113,8 +118,12 @@ module.exports = {
         { name: "Status:", value: siegeStatus, inline: true }
       )
       .setTimestamp()
-      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
-
-    await interaction.reply({ embeds: [siege] });
+      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
+    
+    if (sieges.length == 0) {
+      await interaction.reply("No sieges with that name were found!")}
+    else {
+      await interaction.reply({ embeds: [siege] })
+    }
   },
 };

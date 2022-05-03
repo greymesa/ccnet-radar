@@ -33,6 +33,12 @@ module.exports = {
         return err;
       });
 
+      const nation = new MessageEmbed()
+
+    if (compltnation === "That nation does not exist!"){
+    }
+    else {
+
     var towns = JSON.stringify(compltnation.towns);
     var codeTowns = codeBlock(towns);
     var king = JSON.stringify(compltnation.king);
@@ -46,8 +52,7 @@ module.exports = {
     var totalResidents = residentsCount.toString();
     var chunks = JSON.stringify(compltnation.area);
 
-    const nation = new MessageEmbed()
-      .setColor("#EE6123")
+      nation.setColor("#EE6123")
       .setTitle(bold(`${capnationname}`))
       .setThumbnail(
         "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"
@@ -70,8 +75,11 @@ module.exports = {
         text: "Bot written by Shadowevil015",
         iconURL:
           "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
-      });
+      })};
 
-    await interaction.reply({ embeds: [nation] });
+    if (compltnation === "That nation does not exist!") {
+      await interaction.reply("I can't find a nation with that name! Did you spell it correctly?")}
+    else {
+      await interaction.reply({ embeds: [nation] })};
   },
 };

@@ -36,11 +36,12 @@ module.exports = {
     var strtimes = JSON.stringify(siegeTimeList);
     var strbalances = JSON.stringify(siegeBalanceList);
 
+    const siege = new MessageEmbed()
+
     if (siegeList.length == 0) {
     }
     else {
-    const siege = new MessageEmbed()
-      .setColor("#EE6123")
+      siege.setColor("#EE6123")
       .setTitle(bold(`Current Sieges`))
       .addFields(
         {

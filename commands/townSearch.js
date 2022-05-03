@@ -21,6 +21,12 @@ module.exports = {
 
     var complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then((res) => res.json()).catch((err) => {return err;});
 
+    const town = new MessageEmbed()
+
+    if (complttown === "That town does not exist!") {}
+
+    else {
+
     var residents = JSON.stringify(complttown.residents);
     var mayor = JSON.stringify(complttown.mayor);
     var coordinates = JSON.stringify("x: " + complttown.x + ", " + "z: " + complttown.z);
@@ -47,8 +53,9 @@ module.exports = {
       codedMayor = mayor;
     }
 
-    const town = new MessageEmbed() // Create a message embed, called capital.
-      .setColor(colourFill) // Sets the sidebar colour of the embed.
+
+
+      town.setColor(colourFill) // Sets the sidebar colour of the embed.
       .setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
       .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
       .addFields(
@@ -67,8 +74,12 @@ module.exports = {
         "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", ")))
       )
       .setTimestamp()
-      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
+      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
 
-    await interaction.reply({ embeds: [town] });
+      if (complttown === "That town does not exist!") {
+        await interaction.reply("I can't find a town with that name! Did you spell it correctly?");
+      }
+      else {
+        await interaction.reply({ embeds: [town] })};
   },
 };
