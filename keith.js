@@ -6,12 +6,12 @@ require("dotenv").config();
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
-const commandFiles = readdirSync("./commands").filter((file) =>
+const commandFiles = readdirSync("./commands/utility/").filter((file) =>
   file.endsWith(".js")
 );
 
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+  const command = require(`./commands/utility/${file}`);
   // Set a new item in the Collection
   // With the key as the command name and the value as the exported module
   client.commands.set(command.data.name, command);

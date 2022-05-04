@@ -6,12 +6,12 @@ require("dotenv").config();
 const { ChalkAdvanced } = require("chalk-advanced");
 
 const commands = [];
-const commandFiles = readdirSync("./commands").filter((file) =>
+const commandFiles = readdirSync("./commands/utility/").filter((file) =>
   file.endsWith(".js")
 );
 
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+  const command = require(`./commands/utility/${file}`);
   commands.push(command.data.toJSON());
 }
 
