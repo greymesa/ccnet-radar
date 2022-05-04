@@ -17,9 +17,11 @@ module.exports = {
   async execute(interaction) {
     const townname = interaction.options.getString("name");
 
-    var captownname = townname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
+    let captownname = townname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
 
-    var complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then((res) => res.json()).catch((err) => {return err;});
+    let complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then((res) => res.json()).catch((err) => {return err;});
+
+    let onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
 
     const town = new MessageEmbed()
 
@@ -27,17 +29,27 @@ module.exports = {
 
     else {
 
-    var residents = JSON.stringify(complttown.residents);
-    var mayor = JSON.stringify(complttown.mayor);
-    var coordinates = JSON.stringify("x: " + complttown.x + ", " + "z: " + complttown.z);
-    var coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${complttown.x},64,${complttown.z};4`;
-    var bank = JSON.stringify(complttown.bank);
-    var upkeep = JSON.stringify(complttown.upkeep);
-    var nation = JSON.stringify(complttown.nation);
-    var capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
-    var peaceful = JSON.stringify(complttown.peacefulness);
-    var chunks = JSON.stringify(complttown.area);
-    var colourFill = JSON.stringify(complttown.colourCodes.fill).replaceAll(/"/g,"");
+  
+    var onlinePlayersName = []
+
+    onlinePlayers.forEach((player) => {
+        onlinePlayersName.push(player.name)
+      }
+  )
+    
+    let onlineResidents = complttown.residents.filter(resident => onlinePlayersName.includes(resident));
+    let strOnlineResidents = JSON.stringify(onlineResidents);
+    let residents = JSON.stringify(complttown.residents);
+    let mayor = JSON.stringify(complttown.mayor);
+    let coordinates = JSON.stringify("x: " + complttown.x + ", " + "z: " + complttown.z);
+    let coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${complttown.x},64,${complttown.z};4`;
+    let bank = JSON.stringify(complttown.bank);
+    let upkeep = JSON.stringify(complttown.upkeep);
+    let nation = JSON.stringify(complttown.nation);
+    let capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
+    let peaceful = JSON.stringify(complttown.peacefulness);
+    let chunks = JSON.stringify(complttown.area);
+    let colourFill = JSON.stringify(complttown.colourCodes.fill).replaceAll(/"/g,"");
 
     let peacefullness;
     if (peaceful == "true") {
@@ -72,6 +84,9 @@ module.exports = {
       )
       .addField(
         "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", ")))
+      )
+      .addField(
+        "Online Residents:", codeBlock(fn.removeStyleCharacters(strOnlineResidents.replaceAll(",", ", ")))
       )
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
