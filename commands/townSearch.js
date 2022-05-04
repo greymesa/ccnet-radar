@@ -86,14 +86,14 @@ module.exports = {
         "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", ")))
       )
       .setTimestamp()
-      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
+      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 
       if (onlineResidents.length == 0) {
         town.addField("Online Residents:", codeBlock("There are no online residents in this town!"));
       }
       else {
         town.addField("Online Residents:", codeBlock(fn.removeStyleCharacters(strOnlineResidents.replaceAll(",", ", "))));
-      }
+      }}
 
       if (complttown === "That town does not exist!") {
         await interaction.reply("I can't find a town with that name! Did you spell it correctly?");
