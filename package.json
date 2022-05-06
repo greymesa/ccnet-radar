@@ -21,9 +21,9 @@
   "author": "Shadowevil015",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shadowevil015/keithjsbot/issues"
+    "url": "https://github.com/Shadowevil015/keith/issues"
   },
-  "homepage": "https://github.com/Shadowevil015/keithjsbot#readme",
+  "homepage": "https://github.com/Shadowevil015/keith#readme",
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.3.0",
