@@ -19,7 +19,7 @@ module.exports = {
   async execute(interaction) {
     const username = interaction.options.getString("name");
 
-    var compltusername = await ccnet.getPlayer(username).then(resident => { return resident })
+    let compltusername = await ccnet.getPlayer(username).then(resident => { return resident })
 
     const resident = new MessageEmbed()
 

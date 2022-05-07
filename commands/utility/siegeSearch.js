@@ -6,29 +6,26 @@ var fn = require("../../functions.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("siegesearch")
-    .setDescription(
-      "Use this command to select a siege and get detailed information about it!"
-    )
-    .addStringOption((option) =>
-      option
+    .setDescription("Use this command to select a siege and get detailed information about it!")
+    .addStringOption((option) => option
         .setName("name")
         .setDescription("The name of either nation in a siege!")
-        .setRequired(true)
-    ),
+        .setRequired(true)),
 
   async execute(interaction) {
-    const uncapSiegeName = interaction.options.getString("name");
 
-    const splitSiegeName = uncapSiegeName.split("_");
+    let uncapSiegeName = interaction.options.getString("name");
+
+    let splitSiegeName = uncapSiegeName.split("_");
 
     for (var i = 0; i < splitSiegeName.length; i++) {
       splitSiegeName[i] =
         splitSiegeName[i].charAt(0).toUpperCase() + splitSiegeName[i].slice(1);
     }
 
-    const siegeName = splitSiegeName.join("_");
+    let siegeName = splitSiegeName.join("_");
 
-    var sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
+    let sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
 
     const siege = new MessageEmbed()
 
@@ -90,13 +87,13 @@ module.exports = {
       }
     });
 
-    var strNames = JSON.stringify(siegeNameList);
-    var nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
-    var strTown = JSON.stringify(siegeTown);
-    var strType = JSON.stringify(siegeType);
-    var strPoints = JSON.stringify(siegePoints);
-    var strTime = JSON.stringify(siegeTimeRemaining);
-    var strWarChest = JSON.stringify(siegeWarChest);
+    let strNames = JSON.stringify(siegeNameList);
+    let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+    let strTown = JSON.stringify(siegeTown);
+    let strType = JSON.stringify(siegeType);
+    let strPoints = JSON.stringify(siegePoints);
+    let strTime = JSON.stringify(siegeTimeRemaining);
+    let strWarChest = JSON.stringify(siegeWarChest);
 
     let siegeStatus;
     if (strPoints.includes("-")) {

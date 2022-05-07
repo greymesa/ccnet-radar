@@ -8,13 +8,14 @@ module.exports = {
     .setDescription("Use this command to get data about the CCNet network!"),
 
   async execute(interaction) {
-    var serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then((res) => res.json()).catch((err) => {return err;});
 
-    var network = JSON.stringify(serverInfo.online);
-    var towny = JSON.stringify(serverInfo.towny);
-    var nations = JSON.stringify(serverInfo.nations);
-    var hub = JSON.stringify(serverInfo.hub);
-    var firstServerStatus = JSON.stringify(serverInfo.serverOnline);
+    let serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then((res) => res.json()).catch((err) => {return err;});
+
+    let network = JSON.stringify(serverInfo.online);
+    let towny = JSON.stringify(serverInfo.towny);
+    let nations = JSON.stringify(serverInfo.nations);
+    let hub = JSON.stringify(serverInfo.hub);
+    let firstServerStatus = JSON.stringify(serverInfo.serverOnline);
 
     let serverStatus;
     if (firstServerStatus == "true") {
@@ -29,16 +30,16 @@ module.exports = {
       .addFields(
         { name: "Towny:", value: towny.replaceAll(/"/g, ""), inline: true },
         { name: "Nations:", value: nations.replaceAll(/"/g, ""), inline: true },
-        { name: "\u200B", value: "\u200B", inline: true },
+        { name: "\u200B", value: "\u200B", inline: true }
       )
       .addFields(
         { name: "Hub/Movecraft:", value: hub.replaceAll(/"/g, ""), inline: true },
         { name: "Network:", value: network.replaceAll(/"/g, ""), inline: true },
-        { name: "\u200B", value: "\u200B", inline: true },
+        { name: "\u200B", value: "\u200B", inline: true }
       )
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
-    await interaction.reply({ embeds: [serverinfo] }).catch((err) => {console.log("help")});
+    await interaction.reply({ embeds: [serverinfo] });
   },
 };

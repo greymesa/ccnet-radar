@@ -7,6 +7,7 @@ module.exports = {
     .setName("market")
     .setDescription(
       "Use this command to find all shops for a certain item!")
+
     .addSubcommand((subcommand) => subcommand
         .setName("buying")
         .setDescription("Search only buying shops!")
@@ -36,7 +37,7 @@ module.exports = {
 
     const selectedItem = splitItemName.join(" ");
 
-    var shops = await fetch("https://shadowevil015.tech/api/v1/shops").then((res) => res.json()).catch((err) => {return err;});
+    let shops = await fetch("https://shadowevil015.tech/api/v1/shops").then((res) => res.json()).catch((err) => {return err;});
 
     var buyingShopsList = [];
     var sellingShopsList = [];
@@ -52,56 +53,37 @@ module.exports = {
     var shopBuyingItem = [];
     var shopSellingItem = [];
 
-    buyingShopsList.forEach((shop) => {
-      if (shop.item === selectedItem) {
-          shopBuyingItem.push(shop.item)}});
-
-    sellingShopsList.forEach((shop) => {
-      if (shop.item === selectedItem) {
-          shopSellingItem.push(shop.item)}});
-
-    var shopBuyingStock = [];
-    var shopSellingStock = [];
-
-    buyingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-          shopBuyingStock.push(shop.stock)}});
-
-    sellingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-          shopSellingStock.push(shop.stock)}});
-
     var shopBuyingPriceStock = [];
     var shopSellingPriceStock = [];
-
-    buyingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-        var dollardollarbill = `$`
-        shopBuyingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))}});
-
-    sellingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-        var dollardollarbill = `$`
-        shopSellingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))}});
 
     var shopBuyingCoords = [];
     var shopSellingCoords = [];
 
     buyingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-          shopBuyingCoords.push(shop.coords)}});
+      if (shop.item === selectedItem) {
+          let dollardollarbill = `$`
+          shopBuyingItem.push(shop.item)
+          shopBuyingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))
+          shopBuyingCoords.push(shop.coords)
+        
+        }});
 
     sellingShopsList.forEach((shop) => {
-        if (shop.item === selectedItem) {
-          shopSellingCoords.push(shop.coords)}});
+      if (shop.item === selectedItem) {
+          let dollardollarbill = `$`
+          shopSellingItem.push(shop.item)
+          shopSellingPriceStock.push(dollardollarbill.concat(shop.price, `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`, shop.stock))
+          shopSellingCoords.push(shop.coords)
+        
+        }});
 
-    var strBuyItem = JSON.stringify(shopBuyingItem);
-    var strBuyPrice = JSON.stringify(shopBuyingPriceStock);
-    var strBuyCoords = JSON.stringify(shopBuyingCoords);
+    let strBuyItem = JSON.stringify(shopBuyingItem);
+    let strBuyPrice = JSON.stringify(shopBuyingPriceStock);
+    let strBuyCoords = JSON.stringify(shopBuyingCoords);
 
-    var strSellItem = JSON.stringify(shopSellingItem);
-    var strSellPrice = JSON.stringify(shopSellingPriceStock);
-    var strSellCoords = JSON.stringify(shopSellingCoords);
+    let strSellItem = JSON.stringify(shopSellingItem);
+    let strSellPrice = JSON.stringify(shopSellingPriceStock);
+    let strSellCoords = JSON.stringify(shopSellingCoords);
 
     let shopStatus;
     if (interaction.options.getSubcommand() === "buying") {
@@ -129,7 +111,6 @@ module.exports = {
         if (sellingShopsList.length === 0) {
         }
         else {
-
 
         sellshop.setColor("#EE6123")
         .setTitle(bold(`${shopStatus} | ${selectedItem}`))

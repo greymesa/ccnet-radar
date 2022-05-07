@@ -9,7 +9,7 @@ module.exports = {
 
   async execute(interaction) {
 
-    var navalSieges = await fetch("https://shadowevil015.tech/api/v1/navalSieges").then((res) => res.json()).catch((err) => {return err;});
+    let navalSieges = await fetch("https://shadowevil015.tech/api/v1/navalSieges").then((res) => res.json()).catch((err) => {return err;});
 
     var navalSiegeList = [];
 
@@ -29,9 +29,9 @@ module.exports = {
         navalSiegeController.push(siegeControl.controller);
     });
 
-    var strName = JSON.stringify(navalSiegeName);
-    var strControl = JSON.stringify(navalSiegeController);
-    var navalLinks = `[Link](https://map.ccnetmc.com/nationsmap/#world;flat;2212,64,-4208;3)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;241,64,-2861;4)\n
+    let strName = JSON.stringify(navalSiegeName);
+    let strControl = JSON.stringify(navalSiegeController);
+    let navalLinks = `[Link](https://map.ccnetmc.com/nationsmap/#world;flat;2212,64,-4208;3)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;241,64,-2861;4)\n
                       [Link](https://map.ccnetmc.com/nationsmap/#world;flat;-5328,64,-4600;2)\n\n[Link](https://map.ccnetmc.com/nationsmap/#world;flat;17172,64,-1888;3)\n
                       [Link](https://map.ccnetmc.com/nationsmap/#world;flat;7548,64,-1296;2)`
 

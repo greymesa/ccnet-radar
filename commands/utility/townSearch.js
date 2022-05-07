@@ -11,10 +11,10 @@ module.exports = {
       option
         .setName("name")
         .setDescription("The name of the town.")
-        .setRequired(true)
-    ),
+        .setRequired(true)),
 
   async execute(interaction) {
+
     const townname = interaction.options.getString("name");
 
     let captownname = townname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
@@ -29,7 +29,6 @@ module.exports = {
 
     else {
 
-  
     var onlinePlayersName = []
 
     onlinePlayers.forEach((player) => {
@@ -71,20 +70,18 @@ module.exports = {
       .setTitle(bold(`${captownname} | ${peacefullness}`)) // Sets the main title of the embed, in bold (who woulda guessed?)
       .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
       .addFields(
-        {name: "Mayor:", value: fn.removeStyleCharacters(codedMayor), inline: true,},
+        { name: "Mayor:", value: fn.removeStyleCharacters(codedMayor), inline: true },
         { name: "Nation:", value: fn.removeStyleCharacters(capNation), inline: true }
       )
       .addFields(
         { name: "Chunks:", value: chunks, inline: true },
-        {name: "Location:", value: `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""), inline: true }
+        { name: "Location:", value: `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""), inline: true }
       )
       .addFields(
         { name: "Bank:", value: fn.removeStyleCharacters(bank), inline: true },
         { name: "Upkeep:", value: fn.removeStyleCharacters(upkeep), inline: true }
       )
-      .addField(
-        "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", ")))
-      )
+      .addField( "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", "))))
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",});
 

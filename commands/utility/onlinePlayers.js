@@ -10,8 +10,7 @@ module.exports = {
 
 	async execute(interaction) {
 
-        var onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err })
-
+    let onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err })
 
     const onlineplayers = new MessageEmbed()
 
@@ -22,11 +21,11 @@ module.exports = {
         }
     )
 
-    var sortedPlayers = onlinePlayersName.sort(function (a, b) {
+    let sortedPlayers = onlinePlayersName.sort(function (a, b) {
             return a.toLowerCase().localeCompare(b.toLowerCase());
         });
 
-    var serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then(res => res.json()).catch(err => { return err })
+    let serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then(res => res.json()).catch(err => { return err })
 
     const nations = JSON.stringify(serverInfo.nations)
 
