@@ -19,9 +19,9 @@ module.exports = {
 
     let serverStatus;
     if (firstServerStatus == "true") {
-      serverStatus = "Online";
+      serverStatus = "Online\xa0\xa0\xa0\xa0<:white_check_mark:972838741548867684>";
     } else {
-      serverStatus = "Offline";
+      serverStatus = "Offline\xa0\xa0\xa0\xa0<:x:972839485303828500>";
     }
 
     const serverinfo = new MessageEmbed()
