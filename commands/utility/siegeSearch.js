@@ -31,57 +31,25 @@ module.exports = {
     else {
 
     var siegeList = [];
+    var siegeNameList = [];
+    var siegeTown = [];
+    var siegeType = [];
+    var siegePoints = [];
+    var siegeTimeRemaining = [];
+    var siegeWarChest = [];
 
     sieges.forEach((siege) => {
       siegeList.push(siege);
     });
 
-    var siegeNameList = [];
-
-    siegeList.forEach((siegeNames) => {
-      if (siegeNames.name.includes(siegeName)) {
-        siegeNameList.push(siegeNames.name);
-      }
-    });
-
-    var siegeTown = [];
-
-    siegeList.forEach((siegeTowns) => {
-      if (siegeTowns.name.includes(siegeName)) {
-        siegeTown.push(siegeTowns.town);
-      }
-    });
-
-    var siegeType = [];
-
-    siegeList.forEach((siegeTypes) => {
-      if (siegeTypes.name.includes(siegeName)) {
-        siegeType.push(siegeTypes.type);
-      }
-    });
-
-    var siegePoints = [];
-
-    siegeList.forEach((siegePoint) => {
-      if (siegePoint.name.includes(siegeName)) {
-        siegePoints.push(siegePoint.points);
-      }
-    });
-
-    var siegeTimeRemaining = [];
-
-    siegeList.forEach((siegeTime) => {
-      if (siegeTime.name.includes(siegeName)) {
-        siegeTimeRemaining.push(siegeTime.time);
-      }
-    });
-
-    var siegeWarChest = [];
-
-    siegeList.forEach((siegeChest) => {
-      if (siegeChest.name.includes(siegeName)) {
-        siegeWarChest.push(siegeChest.warchest);
-      }
+    siegeList.forEach((siege) => {
+      if (siege.name.includes(siegeName)) {
+            siegeNameList.push(siege.name);
+            siegeTown.push(siege.town);
+            siegeType.push(siege.type);
+            siegePoints.push(siege.points);
+            siegeTimeRemaining.push(siege.time);
+            siegeWarChest.push(siege.warchest)}
     });
 
     let strNames = JSON.stringify(siegeNameList);
