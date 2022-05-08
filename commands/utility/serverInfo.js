@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, bold, italic } = require("@discordjs/builders");
+const { SlashCommandBuilder, bold } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 
@@ -8,14 +8,13 @@ module.exports = {
     .setDescription("Use this command to get data about the CCNet network!"),
 
   async execute(interaction) {
+    const serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then((res) => res.json()).catch((err) => {return err});
 
-    let serverInfo = await fetch("https://shadowevil015.tech/api/v1/serverInfo/").then((res) => res.json()).catch((err) => {return err;});
-
-    let network = JSON.stringify(serverInfo.online);
-    let towny = JSON.stringify(serverInfo.towny);
-    let nations = JSON.stringify(serverInfo.nations);
-    let hub = JSON.stringify(serverInfo.hub);
-    let firstServerStatus = JSON.stringify(serverInfo.serverOnline);
+    const network = JSON.stringify(serverInfo.online);
+    const towny = JSON.stringify(serverInfo.towny);
+    const nations = JSON.stringify(serverInfo.nations);
+    const hub = JSON.stringify(serverInfo.hub);
+    const firstServerStatus = JSON.stringify(serverInfo.serverOnline);
 
     let serverStatus;
     if (firstServerStatus == "true") {

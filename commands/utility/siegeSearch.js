@@ -13,19 +13,16 @@ module.exports = {
         .setRequired(true)),
 
   async execute(interaction) {
-
-    let uncapSiegeName = interaction.options.getString("name");
-
+    const uncapSiegeName = interaction.options.getString("name");
     let splitSiegeName = uncapSiegeName.split("_");
 
-    for (var i = 0; i < splitSiegeName.length; i++) {
-      splitSiegeName[i] =
-        splitSiegeName[i].charAt(0).toUpperCase() + splitSiegeName[i].slice(1);
+    for (let i = 0; i < splitSiegeName.length; i++) {
+      splitSiegeName[i] = splitSiegeName[i].charAt(0).toUpperCase() + splitSiegeName[i].slice(1);
     }
 
-    let siegeName = splitSiegeName.join("_");
+    const siegeName = splitSiegeName.join("_");
 
-    let sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
+    const sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
 
     const siege = new MessageEmbed()
 

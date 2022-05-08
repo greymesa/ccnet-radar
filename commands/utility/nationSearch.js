@@ -12,63 +12,51 @@ module.exports = {
         .setRequired(true)),
 
   async execute(interaction) {
-
     const nationname = interaction.options.getString("name");
 
-    let capnationname = nationname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
-
-    let compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/" + nationname).then((res) => res.json()).catch((err) => {return err;});
-
-    let onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
-
-    var onlinePlayersName = []
+    const capnationname = nationname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
+    const compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/" + nationname).then((res) => res.json()).catch((err) => {return err;});
+    const onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
+    let onlinePlayersName = [];
 
     onlinePlayers.forEach((player) => {
-        onlinePlayersName.push(player.name)
-      }
-  )
-
-    const nation = new MessageEmbed()
-
-    if (compltnation === "That nation does not exist!"){
-    }
-
-    else {
-
-    let onlineResidents = compltnation.residents.filter(resident => onlinePlayersName.includes(resident));
-    let strOnlineResidents = JSON.stringify(onlineResidents);
-    let towns = JSON.stringify(compltnation.towns);
-    let codeTowns = codeBlock(towns);
-    let king = JSON.stringify(compltnation.king);
-    let capital = JSON.stringify(compltnation.capitalName);
-    let coordinates = JSON.stringify("x: " + compltnation.capitalX + ", " + "z: " + compltnation.capitalZ);
-    let coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${compltnation.capitalX},64,${compltnation.capitalZ};4`;
-    let residents = JSON.stringify(compltnation.residents);
-    let residentsCount = residents.split(",").length;
-    let totalResidents = residentsCount.toString();
-    let chunks = JSON.stringify(compltnation.area);
-
-      nation.setColor("#EE6123")
-      .setTitle(bold(`${capnationname}`))
-      .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
-      .addFields(
-        { name: "Leader:", value: king.replaceAll(/"/g, ""), inline: true },
-        { name: "Capital:", value: capital.replaceAll(/"/g, ""), inline: true }
-      )
-      .addField("Location:", `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""))
-      .addFields(
-        { name: "Chunks:", value: chunks, inline: true },
-        { name: "Residents:", value: totalResidents, inline: true }
-      )
-      .addField("Towns:", codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "))
-      .addField("Online Nation Members:", codeBlock(strOnlineResidents.replaceAll(/"/g, "").replaceAll(/,/g, ", ")))
-      .setTimestamp()
-      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
+        onlinePlayersName.push(player.name);
+    });
 
     if (compltnation === "That nation does not exist!") {
-      await interaction.reply("I can't find a nation with that name! Did you spell it correctly?")
-    }
-    else {
+      await interaction.reply("I can't find a nation with that name! Did you spell it correctly?");
+    } else {
+      const onlineResidents = compltnation.residents.filter(resident => onlinePlayersName.includes(resident));
+      const strOnlineResidents = JSON.stringify(onlineResidents);
+      const towns = JSON.stringify(compltnation.towns);
+      const codeTowns = codeBlock(towns);
+      const king = JSON.stringify(compltnation.king);
+      const capital = JSON.stringify(compltnation.capitalName);
+      const coordinates = JSON.stringify("x: " + compltnation.capitalX + ", " + "z: " + compltnation.capitalZ);
+      const coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${compltnation.capitalX},64,${compltnation.capitalZ};4`;
+      const residents = JSON.stringify(compltnation.residents);
+      const residentsCount = residents.split(",").length;
+      const totalResidents = residentsCount.toString();
+      const chunks = JSON.stringify(compltnation.area);
+
+      const nation = new MessageEmbed()
+        .setColor("#EE6123")
+        .setTitle(bold(`${capnationname}`))
+        .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
+        .addFields(
+          { name: "Leader:", value: king.replaceAll(/"/g, ""), inline: true },
+          { name: "Capital:", value: capital.replaceAll(/"/g, ""), inline: true }
+        )
+        .addField("Location:", `[${coordinates}](${coordinatesLink})`.replaceAll(/"/g, ""))
+        .addFields(
+          { name: "Chunks:", value: chunks, inline: true },
+          { name: "Residents:", value: totalResidents, inline: true }
+        )
+        .addField("Towns:", codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "))
+        .addField("Online Nation Members:", codeBlock(strOnlineResidents.replaceAll(/"/g, "").replaceAll(/,/g, ", ")))
+        .setTimestamp()
+        .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
       await interaction.reply({ embeds: [nation] })};
   },
 };
