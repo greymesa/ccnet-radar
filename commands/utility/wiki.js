@@ -139,28 +139,54 @@ module.exports = {
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
-    if (interaction.options.getSubcommand() === "nationsguide") {
-      await interaction.reply({ embeds: [nationsguide] });
-    } else if (interaction.options.getSubcommand() === "townyguide") {
-      await interaction.reply({ embeds: [townyguide] });
-    } else if (interaction.options.getSubcommand() === "runes") {
-      await interaction.reply({ embeds: [runes] });
-    } else if (interaction.options.getSubcommand() === "brewery") {
-      await interaction.reply({ embeds: [brewery] });
-    } else if (interaction.options.getSubcommand() === "townyplugin") {
-      await interaction.reply({ embeds: [townyplugin] });
-    } else if (interaction.options.getSubcommand() === "siegewar") {
-      await interaction.reply({ embeds: [siegewar] });
-    } else if (interaction.options.getSubcommand() === "combat") {
-      await interaction.reply({ embeds: [combat] });
-    } else if (interaction.options.getSubcommand() === "navalsiege") {
-      await interaction.reply({ embeds: [navalsiege] });
-    } else if (interaction.options.getSubcommand() === "geofeatures") {
-      await interaction.reply({ embeds: [geofeatures] });
-    } else if (interaction.options.getSubcommand() === "voting") {
-      await interaction.reply({ embeds: [voting] });
-    } else if (interaction.options.getSubcommand() === "link") {
-      await interaction.reply({ embeds: [wikilink] });
+    switch(interaction.options.getSubcommand()) {
+      case "nationsguide": {
+        await interaction.reply({ embeds: [nationsguide] });
+        break;
+      }
+      case "townyguide": {
+        await interaction.reply({ embeds: [townyguide] });
+        break;
+      }
+      case "runes": {
+        await interaction.reply({ embeds: [runes] });
+        break;
+      }
+      case "brewery": {
+        await interaction.reply({ embeds: [brewery] });
+        break;
+      }
+      case "townyplugin": {
+        await interaction.reply({ embeds: [townyplugin] });
+        break;
+      }
+      case "siegewar": {
+        await interaction.reply({ embeds: [siegewar] });
+        break;
+      }
+      case "combat": {
+        await interaction.reply({ embeds: [combat] });
+        break;
+      }
+      case "navalsiege": {
+        await interaction.reply({ embeds: [navalsiege] })
+        break;
+      }
+      case "geofeatures": {
+        await interaction.reply({ embeds: [geofeatures] });
+        break;
+      }
+      case "voting": {
+        await interaction.reply({ embeds: [voting] });
+        break;
+      }
+      case "link": {
+        await interaction.reply({ embeds: [wikilink] });
+        break;
+      }
+      default: {
+        await interaction.reply({ content: "An error occured." });
+      }
     }
   },
 };

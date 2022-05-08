@@ -587,56 +587,110 @@ module.exports = {
           "https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",
       });
 
-    if (interaction.options.getSubcommand() === "aircraftcarrier") {
-      await interaction.reply({ embeds: [aircraftcarrier] });
-    } else if (interaction.options.getSubcommand() === "bomber") {
-      await interaction.reply({ embeds: [bomber] });
-    } else if (interaction.options.getSubcommand() === "caravel") {
-      await interaction.reply({ embeds: [caravel] });
-    } else if (interaction.options.getSubcommand() === "cargoship") {
-      await interaction.reply({ embeds: [cargoship] });
-    } else if (interaction.options.getSubcommand() === "cog") {
-      await interaction.reply({ embeds: [cog] });
-    } else if (interaction.options.getSubcommand() === "corvette") {
-      await interaction.reply({ embeds: [corvette] });
-    } else if (interaction.options.getSubcommand() === "cruiser") {
-      await interaction.reply({ embeds: [cruiser] });
-    } else if (interaction.options.getSubcommand() === "depthcharge") {
-      await interaction.reply({ embeds: [depthcharge] });
-    } else if (interaction.options.getSubcommand() === "destroyer") {
-      await interaction.reply({ embeds: [destroyer] });
-    } else if (interaction.options.getSubcommand() === "dreadnought") {
-      await interaction.reply({ embeds: [dreadnought] });
-    } else if (interaction.options.getSubcommand() === "eastindiaman") {
-      await interaction.reply({ embeds: [eastindiaman] });
-    } else if (interaction.options.getSubcommand() === "elevator") {
-      await interaction.reply({ embeds: [elevator] });
-    } else if (interaction.options.getSubcommand() === "fighter") {
-      await interaction.reply({ embeds: [fighter] });
-    } else if (interaction.options.getSubcommand() === "heavytank") {
-      await interaction.reply({ embeds: [heavytank] });
-    } else if (interaction.options.getSubcommand() === "icebreaker") {
-      await interaction.reply({ embeds: [icebreaker] });
-    } else if (interaction.options.getSubcommand() === "ifv") {
-      await interaction.reply({ embeds: [ifv] });
-    } else if (interaction.options.getSubcommand() === "landingcraft") {
-      await interaction.reply({ embeds: [landingcraft] });
-    } else if (interaction.options.getSubcommand() === "shipyard") {
-      await interaction.reply({ embeds: [shipyard] });
-    } else if (interaction.options.getSubcommand() === "submarine") {
-      await interaction.reply({ embeds: [submarine] });
-    } else if (interaction.options.getSubcommand() === "tank") {
-      await interaction.reply({ embeds: [tank] });
-    } else if (interaction.options.getSubcommand() === "torpedo") {
-      await interaction.reply({ embeds: [torpedo] });
-    } else if (interaction.options.getSubcommand() === "train") {
-      await interaction.reply({ embeds: [train] });
-    } else if (interaction.options.getSubcommand() === "truck") {
-      await interaction.reply({ embeds: [truck] });
-    } else if (interaction.options.getSubcommand() === "turret") {
-      await interaction.reply({ embeds: [turret] });
-    } else if (interaction.options.getSubcommand() === "zeppelin") {
-      await interaction.reply({ embeds: [zeppelin] });
+    switch(interaction.options.getSubcommand()) {
+      case "aircraftcarrier": {
+        await interaction.reply({ embeds: [aircraftcarrier] });
+        break;
+      }
+      case "bomber": {
+        await interaction.reply({ embeds: [bomber] });
+        break;
+      }
+      case "caravel": {
+        await interaction.reply({ embeds: [caravel] });
+        break;
+      }
+      case "cargoship": {
+        await interaction.reply({ embeds: [cargoship] });
+        break;
+      }
+      case "cog": {
+        await interaction.reply({ embeds: [cog] });
+        break;
+      }
+      case "corvette": {
+        await interaction.reply({ embeds: [corvette] });
+        break;
+      }
+      case "cruiser": {
+        await interaction.reply({ embeds: [cruiser] });
+        break;
+      }
+      case "depthcharge": {
+        await interaction.reply({ embeds: [depthcharge] });
+        break;
+      }
+      case "destroyer": {
+        await interaction.reply({ embeds: [destroyer] });
+        break;
+      }
+      case "dreadnought": {
+        await interaction.reply({ embeds: [dreadnought] });
+        break;
+      }
+      case "eastindiaman": {
+        await interaction.reply({ embeds: [eastindiaman] });
+        break;
+      }
+      case "elevator": {
+        await interaction.reply({ embeds: [elevator] });
+        break;
+      }
+      case "fighter": {
+        await interaction.reply({ embeds: [fighter] });
+        break;
+      }
+      case "heavytank": {
+        await interaction.reply({ embeds: [heavytank] });
+        break;
+      }
+      case "icebreaker": {
+        await interaction.reply({ embeds: [icebreaker] });
+        break;
+      }
+      case "ifv": {
+        await interaction.reply({ embeds: [ifv] });
+        break;
+      }
+      case "landingcraft": {
+        await interaction.reply({ embeds: [landingcraft] });
+        break;
+      }
+      case "shipyard": {
+        await interaction.reply({ embeds: [shipyard] });
+        break;
+      }
+      case "submarine": {
+        await interaction.reply({ embeds: [submarine] });
+        break;
+      }
+      case "tank": {
+        await interaction.reply({ embeds: [tank] });
+        break;
+      }
+      case "torpedo": {
+        await interaction.reply({ embeds: [torpedo] });
+        break;
+      }
+      case "train": {
+        await interaction.reply({ embeds: [train] });
+        break;
+      }
+      case "truck": {
+        await interaction.reply({ embeds: [truck] });
+        break;
+      }
+      case "turret": {
+        await interaction.reply({ embeds: [turret] });
+        break;
+      }
+      case "zeppelin": {
+        await interaction.reply({ embeds: [zeppelin] });
+        break;
+      }
+      default: {
+        await interaction.reply({ content: "An error occured." });
+      }
     }
   },
 };
