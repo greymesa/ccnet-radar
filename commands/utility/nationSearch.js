@@ -19,6 +19,15 @@ module.exports = {
 
     let compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/" + nationname).then((res) => res.json()).catch((err) => {return err;});
 
+    let onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
+
+    var onlinePlayersName = []
+
+    onlinePlayers.forEach((player) => {
+        onlinePlayersName.push(player.name)
+      }
+  )
+
     const nation = new MessageEmbed()
 
     if (compltnation === "That nation does not exist!"){
@@ -26,6 +35,8 @@ module.exports = {
 
     else {
 
+    let onlineResidents = compltnation.residents.filter(resident => onlinePlayersName.includes(resident));
+    let strOnlineResidents = JSON.stringify(onlineResidents);
     let towns = JSON.stringify(compltnation.towns);
     let codeTowns = codeBlock(towns);
     let king = JSON.stringify(compltnation.king);
@@ -50,6 +61,7 @@ module.exports = {
         { name: "Residents:", value: totalResidents, inline: true }
       )
       .addField("Towns:", codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "))
+      .addField("Online Nation Members:", codeBlock(strOnlineResidents.replaceAll(/"/g, "").replaceAll(/,/g, ", ")))
       .setTimestamp()
       .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})};
 
