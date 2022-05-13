@@ -53,9 +53,15 @@ module.exports = {
           { name: "Residents:", value: totalResidents, inline: true }
         )
         .addField("Towns:", codeTowns.replaceAll(/"/g, "").replaceAll(/,/g, ", "))
-        .addField("Online Nation Members:", codeBlock(strOnlineResidents.replaceAll(/"/g, "").replaceAll(/,/g, ", ")))
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+      if (onlineResidents.length == 0) {
+        nation.addField("Online Nation Members:", codeBlock("There are no online nation members!"))
+      }
+      else {
+        nation.addField("Online Nation Members:", codeBlock(strOnlineResidents.replaceAll(/"/g, "").replaceAll(/,/g, ", ")))
+      }
 
       await interaction.reply({ embeds: [nation] })};
   },
