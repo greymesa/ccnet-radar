@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, bold } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
-var fn = require("../../functions.js");
+var fn = require("../functions.js");
 
 module.exports = {
   data: new SlashCommandBuilder()

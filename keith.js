@@ -1,31 +1,27 @@
-const { readdirSync } = require("fs");
-const { Client, Collection, Intents } = require("discord.js");
+const fs = require('node:fs');
+const path = require('node:path');
+const { Client, Collection, Intents } = require('discord.js');
 require("dotenv").config();
 
-// Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
-const commandFiles = readdirSync("./commands/utility/").filter((file) =>
-  file.endsWith(".js")
-);
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-  const command = require(`./commands/utility/${file}`);
-  // Set a new item in the Collection
-  // With the key as the command name and the value as the exported module
+  const filePath = path.join(commandsPath, file);
+  const command = require(filePath);
   client.commands.set(command.data.name, command);
 }
 
-// When the client is ready, run this code (only once)
-client.once("ready", () => {
-  console.log("Ready!");
+client.once('ready', () => {
+  console.log('Ready!');
   client.user.setActivity("you", { type: "WATCHING" });
   client.user.setStatus("dnd");
 });
 
-// Wait and listen for a command, and go through a list to find the command name - then reply
-client.on("interactionCreate", async (interaction) => {
+client.on('interactionCreate', async interaction => {
   if (!interaction.isCommand()) return;
 
   const command = client.commands.get(interaction.commandName);
@@ -36,12 +32,8 @@ client.on("interactionCreate", async (interaction) => {
     await command.execute(interaction);
   } catch (error) {
     console.error(error);
-    await interaction.reply({
-      content: "There was an error while executing this command!",
-      ephemeral: true,
-    });
+    await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
   }
 });
 
-// Login to Discord with your client's token
 client.login(process.env.TOKEN);
