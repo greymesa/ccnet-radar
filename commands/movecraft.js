@@ -19,7 +19,7 @@ module.exports = {
     )
     .addSubcommand((subcommand) =>
       subcommand
-        .setName("caraval")
+        .setName("caravel")
         .setDescription("A link to the Caravel craft page!")
     )
     .addSubcommand((subcommand) =>
