@@ -83,9 +83,7 @@ module.exports = {
     .addSubcommand((subcommand) =>
       subcommand
         .setName("ifv")
-        .setDescription(
-          "A link to the IFV (Infantry Fighting Vehicle) craft page!"
-        )
+        .setDescription("A link to the IFV (Infantry Fighting Vehicle) craft page!")
     )
     .addSubcommand((subcommand) =>
       subcommand
