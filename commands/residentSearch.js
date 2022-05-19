@@ -70,14 +70,14 @@ module.exports = {
         .addFields(
           { name: "Town:", value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true},
           { name: "Nation:", value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true },
-          { name: "\u200B", value: "\u200B", inline: true }
+          { name: "\u200b", value: "\u200b", inline: true },
+          { name: "Rank:", value: actualRank.replaceAll(/"/g, ""), inline: true },
         )
         .setTimestamp()
         .setFooter({ text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
       if (status === "Online") {
         const inGameRank = nickname.split("]")[0].replace("[", "").replaceAll(/"/g, "");
-        resident.addField("Rank:", actualRank, true)
         resident.addField("In-game Rank:", inGameRank, true)
         resident.addField("\u200B", "\u200B", true)
       } else {}
