@@ -166,23 +166,10 @@ module.exports = {
       .setTitle(bold('How do I appeal?'))
       .setDescription(italic('You can appeal your ban via this link:'))
       .addFields(
-        {
-          name: 'Link:',
-          value: '[https://ccnetmc.com/appeal](https://ccnetmc.com/appeal)',
-        },
-        {
-          name: '\u200B',
-          value: bold(
-            'Note: You will need to create an account to make a ban appeal.'
-          ),
-        }
-      )
+        {name: 'Link:', value: '[https://ccnetmc.com/appeal](https://ccnetmc.com/appeal)'},
+        {name: '\u200B', value: bold('Note: You will need to create an account to make a ban appeal.')})
       .setTimestamp()
-      .setFooter({
-        text: 'Bot written by Shadowevil015',
-        iconURL:
-          'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437',
-      });
+      .setFooter({text: 'Bot written by Shadowevil015', iconURL:'https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437'});
 
     switch (interaction.options.getSubcommand()) {
       case 'ip': {

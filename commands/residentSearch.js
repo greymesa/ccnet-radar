@@ -23,7 +23,7 @@ module.exports = {
 
     const compltusername = await ccnet.getPlayer(username).then(resident => { return resident });
 
-    if (compltusername == null || compltusername == undefined) {
+    if (compltusername == null || compltusername == undefined || compltusername == "That player does not exist!") {
       await interaction.reply("I can't find this player! Are you sure you spelt their name correctly?")}
     else {
       const town = JSON.stringify(compltusername.town);
