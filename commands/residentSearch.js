@@ -17,31 +17,24 @@ module.exports = {
 
   async execute(interaction) {
 
+    await interaction.deferReply()
+
     const username = interaction.options.getString("name");
+    var compltusername = await ccnet.getPlayer(username).then(resident => { return resident });
 
     const resident = new MessageEmbed()
 
-    const compltusername = await ccnet.getPlayer(username).then(resident => { return resident });
-
-    if (compltusername == null || compltusername == undefined) {
+    if (compltusername == null || compltusername == undefined || compltusername == "That player does not exist!") {
       await interaction.reply("Are you sure this player exists? (Don't forget, you cannot look up a townless player)")}
-    else if (compltusername == "That player does not exist!") {
-      await interaction.reply("I can't find this player! Are you sure you spelt their name correctly?")}
     else {
-      const town = JSON.stringify(compltusername.town);
-      const nation = JSON.stringify(compltusername.nation);
-      const endpointName = JSON.stringify(compltusername.name);
-      const capitalisedName = endpointName.replaceAll(/"/g, "");
-      const rank = JSON.stringify(compltusername.rank);
-      const actualRank = rank.replaceAll(/"/g, "");
+      var town = JSON.stringify(compltusername.town);
+      var nation = JSON.stringify(compltusername.nation);
+      let endpointName = JSON.stringify(compltusername.name);
+      var name = inlineCode(endpointName).replace(/\"/g, "");
+      var rank = JSON.stringify(compltusername.rank);
+      var actualRank = rank.replaceAll(/"/g, "");
 
-      let codedName;
-      if (capitalisedName.includes("_")) {
-        codedName = inlineCode(capitalisedName);
-      } else {
-        codedName = capitalisedName;
-
-        resident.setTitle(bold(`${codedName} | ${actualRank}`))
+        resident.setTitle(bold(`${name} | ${actualRank}`))
         .addFields(
           { name: "Town:", value: town.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true},
           { name: "Nation:", value: nation.replaceAll(/"/g, "").replaceAll(/_/g, " "), inline: true }
@@ -49,8 +42,7 @@ module.exports = {
         .setTimestamp()
         .setFooter({ text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
-          await interaction.reply(({ embeds: [resident] }))
+          await interaction.editReply(({ embeds: [resident] }))
       }
     }
   }
-}
