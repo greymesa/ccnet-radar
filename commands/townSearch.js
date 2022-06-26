@@ -15,9 +15,10 @@ module.exports = {
 
   async execute(interaction) {
     const townname = interaction.options.getString("name");
+    const uTownName = townname.replaceAll(" ", "_")
 
     const captownname = townname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
-    const complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+townname).then((res) => res.json()).catch((err) => {return err;});
+    const complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+uTownName).then((res) => res.json()).catch((err) => {return err;});
     const onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
 
     if (complttown === "That town does not exist!") {
