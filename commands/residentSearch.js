@@ -25,7 +25,7 @@ module.exports = {
     const resident = new MessageEmbed()
 
     if (compltusername == null || compltusername == undefined || compltusername == "That player does not exist!") {
-      await interaction.reply("Are you sure this player exists? (Don't forget, you cannot look up a townless player)")}
+      await interaction.reply(`Are you sure the player "${username}" exists? (Don't forget, you cannot look up a townless player)`)}
     else {
       var town = JSON.stringify(compltusername.town);
       var nation = JSON.stringify(compltusername.nation);

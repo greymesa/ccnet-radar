@@ -24,7 +24,7 @@ module.exports = {
     });
 
     if (compltnation === "That nation does not exist!") {
-      await interaction.reply("I can't find a nation with that name! Did you spell it correctly?");
+      await interaction.reply(`I can't find a nation called "${nationname}", did you spell it correctly?`);
     } else {
       const onlineResidents = compltnation.residents.filter(resident => onlinePlayersName.includes(resident));
       const strOnlineResidents = JSON.stringify(onlineResidents);

@@ -22,7 +22,7 @@ module.exports = {
     const onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
 
     if (complttown === "That town does not exist!") {
-      await interaction.reply("I can't find a town with that name! Did you spell it correctly?");
+      await interaction.reply(`I can't find a town called "${townname}", did you spell it correctly?`);
     } else {
       let onlinePlayersName = []
 
