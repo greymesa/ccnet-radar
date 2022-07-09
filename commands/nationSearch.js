@@ -13,9 +13,10 @@ module.exports = {
 
   async execute(interaction) {
     const nationname = interaction.options.getString("name");
+    const uNationName = nationname.replaceAll(" ", "_")
 
     const capnationname = nationname.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g, (_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
-    const compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/" + nationname).then((res) => res.json()).catch((err) => {return err;});
+    const compltnation = await fetch("https://shadowevil015.tech/api/v1/nations/" + uNationName).then((res) => res.json()).catch((err) => {return err;});
     const onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
     let onlinePlayersName = [];
 
