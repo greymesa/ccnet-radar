@@ -16,6 +16,17 @@ module.exports = {
     const uncapSiegeName = interaction.options.getString("name");
     let splitSiegeName = uncapSiegeName.split("_");
 
+    const avatURL = interaction.user.displayAvatarURL();
+
+    const logger = new MessageEmbed()
+    .setColor("#EE6123")
+    .setTitle(`@${interaction.user.tag} used the nation command to find information about ${uncapSiegeName}!`)
+    .setThumbnail(avatURL)
+    .setTimestamp()
+    .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+    interaction.client.channels.cache.get("266302670480998400").send({ embeds: [logger] });
+
     for (let i = 0; i < splitSiegeName.length; i++) {
       splitSiegeName[i] = splitSiegeName[i].charAt(0).toUpperCase() + splitSiegeName[i].slice(1);
     }

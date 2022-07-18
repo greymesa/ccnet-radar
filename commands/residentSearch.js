@@ -22,6 +22,17 @@ module.exports = {
     const username = interaction.options.getString("name");
     var compltusername = await ccnet.getPlayer(username).then(resident => { return resident });
 
+    const avatURL = interaction.user.displayAvatarURL();
+
+    const logger = new MessageEmbed()
+    .setColor("#EE6123")
+    .setTitle(`@${interaction.user.tag} used the resident command to find information about ${username}!`)
+    .setThumbnail(avatURL)
+    .setTimestamp()
+    .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+    interaction.client.channels.cache.get("266302670480998400").send({ embeds: [logger] });
+
     const resident = new MessageEmbed()
 
     if (compltusername == null || compltusername == undefined || compltusername == "That player does not exist!") {

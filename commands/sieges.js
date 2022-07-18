@@ -10,6 +10,17 @@ module.exports = {
   async execute(interaction) {
     const sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => { return err });
 
+    const avatURL = interaction.user.displayAvatarURL();
+
+    const logger = new MessageEmbed()
+    .setColor("#EE6123")
+    .setTitle(`@${interaction.user.tag} used the sieges command to find information about sieges!`)
+    .setThumbnail(avatURL)
+    .setTimestamp()
+    .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+    interaction.client.channels.cache.get("266302670480998400").send({ embeds: [logger] });
+
     var siegeList = [];
     var siegeTimeList = [];
     var siegeBalanceList = [];

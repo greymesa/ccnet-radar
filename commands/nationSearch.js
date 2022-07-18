@@ -12,6 +12,7 @@ module.exports = {
         .setRequired(true)),
 
   async execute(interaction) {
+
     const nationname = interaction.options.getString("name");
     const uNationName = nationname.replaceAll(" ", "_")
 
@@ -39,10 +40,20 @@ module.exports = {
       const residentsCount = residents.split(",").length;
       const totalResidents = residentsCount.toString();
       const chunks = JSON.stringify(compltnation.area);
+      const avatURL = interaction.user.displayAvatarURL();
+
+      const logger = new MessageEmbed()
+      .setColor("#EE6123")
+      .setTitle(`@${interaction.user.tag} used the nation command to find information about ${nationname}!`)
+      .setThumbnail(avatURL)
+      .setTimestamp()
+      .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+      interaction.client.channels.cache.get("266302670480998400").send({ embeds: [logger] });
 
       const nation = new MessageEmbed()
         .setColor("#EE6123")
-        .setTitle(bold(`${capnationname}`))
+        .setTitle(bold(`<@${interaction.user.id}>`))
         .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
         .addFields(
           { name: "Leader:", value: king.replaceAll(/"/g, ""), inline: true },

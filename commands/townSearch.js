@@ -21,6 +21,17 @@ module.exports = {
     const complttown = await fetch("https://shadowevil015.tech/api/v1/towns/"+uTownName).then((res) => res.json()).catch((err) => {return err;});
     const onlinePlayers = await fetch("https://shadowevil015.tech/api/v1/onlinePlayers/").then(res => res.json()).catch(err => { return err });
 
+    const avatURL = interaction.user.displayAvatarURL();
+
+    const logger = new MessageEmbed()
+    .setColor("#EE6123")
+    .setTitle(`@${interaction.user.tag} used the town command to find information about ${uTownName}!`)
+    .setThumbnail(avatURL)
+    .setTimestamp()
+    .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
+
+    interaction.client.channels.cache.get("266302670480998400").send({ embeds: [logger] });
+
     if (complttown === "That town does not exist!") {
       await interaction.reply(`I can't find a town called "${townname}", did you spell it correctly?`);
     } else {
