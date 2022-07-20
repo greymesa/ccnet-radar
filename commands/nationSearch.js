@@ -53,7 +53,7 @@ module.exports = {
 
       const nation = new MessageEmbed()
         .setColor("#EE6123")
-        .setTitle(bold(`<@${interaction.user.id}>`))
+        .setTitle(bold(`${capnationname}`))
         .setThumbnail("https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437")
         .addFields(
           { name: "Leader:", value: king.replaceAll(/"/g, ""), inline: true },
