@@ -44,6 +44,7 @@ module.exports = {
       const onlineResidents = complttown.residents.filter(resident => onlinePlayersName.includes(resident));
       const strOnlineResidents = JSON.stringify(onlineResidents);
       const residents = JSON.stringify(complttown.residents);
+      const trusted = JSON.stringify(complttown.trusted);
       const mayor = JSON.stringify(complttown.mayor);
       const coordinates = JSON.stringify("x: " + complttown.x + ", " + "z: " + complttown.z);
       const coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${complttown.x},64,${complttown.z};4`;
@@ -75,6 +76,7 @@ module.exports = {
           { name: "Upkeep:", value: fn.removeStyleCharacters(upkeep), inline: true }
         )
         .addField( "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", "))))
+        .addField( "Trusted:", codeBlock(fn.removeStyleCharacters(trusted.replaceAll(",", ", "))))
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
