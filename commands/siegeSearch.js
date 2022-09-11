@@ -141,6 +141,284 @@ module.exports = {
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
               await interaction.editReply({ embeds: [siege] })}
-            }
-          }
+            else if (interaction.values.includes(`second`)) {
+              await interaction.deferReply();
+              var siegeList = [];
+              var siegeNameList = [];
+              var siegeTown = [];
+              var siegeType = [];
+              var siegePoints = [];
+              var siegeTimeRemaining = [];
+              var siegeWarChest = [];
+          
+              sieges.forEach((siege) => {
+                siegeList.push(siege);
+              });
+          
+              siegeList.forEach((siege) => {
+                if (siege.name.includes(siegeList[1].name)) {
+                      siegeNameList.push(siege.name);
+                      siegeTown.push(siege.town);
+                      siegeType.push(siege.type);
+                      siegePoints.push(siege.points);
+                      siegeTimeRemaining.push(siege.time);
+                      siegeWarChest.push(siege.warchest)}
+              });
+              console.log(siegeNameList);
+              let strNames = JSON.stringify(siegeNameList);
+              let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+              let strTown = JSON.stringify(siegeTown);
+              let strType = JSON.stringify(siegeType);
+              let strPoints = JSON.stringify(siegePoints);
+              let strTime = JSON.stringify(siegeTimeRemaining);
+              let strWarChest = JSON.stringify(siegeWarChest);
+          
+              let siegeStatus;
+              if (strPoints.includes("-")) {
+                siegeStatus = "Defender Lead";
+              } else {
+                siegeStatus = "Attacker Lead";
+              }
+          
+                siege.setColor("#EE6123")
+                .setTitle(bold(`${nameTitle}`))
+                .addFields(
+                  {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
+                  {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+                )
+                .addFields(
+                  {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
+                  { name: "Status:", value: siegeStatus, inline: true }
+                )
+                .setTimestamp()
+                .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
+
+              await interaction.editReply({ embeds: [siege] })}
+            else if (interaction.values.includes(`third`)) {
+              await interaction.deferReply();
+              var siegeList = [];
+              var siegeNameList = [];
+              var siegeTown = [];
+              var siegeType = [];
+              var siegePoints = [];
+              var siegeTimeRemaining = [];
+              var siegeWarChest = [];
+          
+              sieges.forEach((siege) => {
+                siegeList.push(siege);
+              });
+          
+              siegeList.forEach((siege) => {
+                if (siege.name.includes(siegeList[2].name)) {
+                      siegeNameList.push(siege.name);
+                      siegeTown.push(siege.town);
+                      siegeType.push(siege.type);
+                      siegePoints.push(siege.points);
+                      siegeTimeRemaining.push(siege.time);
+                      siegeWarChest.push(siege.warchest)}
+              });
+              console.log(siegeNameList);
+              let strNames = JSON.stringify(siegeNameList);
+              let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+              let strTown = JSON.stringify(siegeTown);
+              let strType = JSON.stringify(siegeType);
+              let strPoints = JSON.stringify(siegePoints);
+              let strTime = JSON.stringify(siegeTimeRemaining);
+              let strWarChest = JSON.stringify(siegeWarChest);
+          
+              let siegeStatus;
+              if (strPoints.includes("-")) {
+                siegeStatus = "Defender Lead";
+              } else {
+                siegeStatus = "Attacker Lead";
+              }
+          
+                siege.setColor("#EE6123")
+                .setTitle(bold(`${nameTitle}`))
+                .addFields(
+                  {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
+                  {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+                )
+                .addFields(
+                  {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
+                  { name: "Status:", value: siegeStatus, inline: true }
+                )
+                .setTimestamp()
+                .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
+
+              await interaction.editReply({ embeds: [siege] })}
+            
+            else if (interaction.values.includes(`fourth`)) {
+              await interaction.deferReply();
+              var siegeList = [];
+              var siegeNameList = [];
+              var siegeTown = [];
+              var siegeType = [];
+              var siegePoints = [];
+              var siegeTimeRemaining = [];
+              var siegeWarChest = [];
+          
+              sieges.forEach((siege) => {
+                siegeList.push(siege);
+              });
+          
+              siegeList.forEach((siege) => {
+                if (siege.name.includes(siegeList[2].name)) {
+                      siegeNameList.push(siege.name);
+                      siegeTown.push(siege.town);
+                      siegeType.push(siege.type);
+                      siegePoints.push(siege.points);
+                      siegeTimeRemaining.push(siege.time);
+                      siegeWarChest.push(siege.warchest)}
+              });
+              console.log(siegeNameList);
+              let strNames = JSON.stringify(siegeNameList);
+              let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+              let strTown = JSON.stringify(siegeTown);
+              let strType = JSON.stringify(siegeType);
+              let strPoints = JSON.stringify(siegePoints);
+              let strTime = JSON.stringify(siegeTimeRemaining);
+              let strWarChest = JSON.stringify(siegeWarChest);
+          
+              let siegeStatus;
+              if (strPoints.includes("-")) {
+                siegeStatus = "Defender Lead";
+              } else {
+                siegeStatus = "Attacker Lead";
+              }
+          
+                siege.setColor("#EE6123")
+                .setTitle(bold(`${nameTitle}`))
+                .addFields(
+                  {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
+                  {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+                )
+                .addFields(
+                  {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
+                  { name: "Status:", value: siegeStatus, inline: true }
+                )
+                .setTimestamp()
+                .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
+
+              await interaction.editReply({ embeds: [siege] })}
+
+            else if (interaction.values.includes(`fifth`)) {
+              await interaction.deferReply();
+              var siegeList = [];
+              var siegeNameList = [];
+              var siegeTown = [];
+              var siegeType = [];
+              var siegePoints = [];
+              var siegeTimeRemaining = [];
+              var siegeWarChest = [];
+          
+              sieges.forEach((siege) => {
+                siegeList.push(siege);
+              });
+          
+              siegeList.forEach((siege) => {
+                if (siege.name.includes(siegeList[2].name)) {
+                      siegeNameList.push(siege.name);
+                      siegeTown.push(siege.town);
+                      siegeType.push(siege.type);
+                      siegePoints.push(siege.points);
+                      siegeTimeRemaining.push(siege.time);
+                      siegeWarChest.push(siege.warchest)}
+              });
+              console.log(siegeNameList);
+              let strNames = JSON.stringify(siegeNameList);
+              let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+              let strTown = JSON.stringify(siegeTown);
+              let strType = JSON.stringify(siegeType);
+              let strPoints = JSON.stringify(siegePoints);
+              let strTime = JSON.stringify(siegeTimeRemaining);
+              let strWarChest = JSON.stringify(siegeWarChest);
+          
+              let siegeStatus;
+              if (strPoints.includes("-")) {
+                siegeStatus = "Defender Lead";
+              } else {
+                siegeStatus = "Attacker Lead";
+              }
+          
+                siege.setColor("#EE6123")
+                .setTitle(bold(`${nameTitle}`))
+                .addFields(
+                  {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
+                  {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+                )
+                .addFields(
+                  {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
+                  { name: "Status:", value: siegeStatus, inline: true }
+                )
+                .setTimestamp()
+                .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
+
+              await interaction.editReply({ embeds: [siege] })}
+
+            else if (interaction.values.includes(`sixth`)) {
+              await interaction.deferReply();
+              var siegeList = [];
+              var siegeNameList = [];
+              var siegeTown = [];
+              var siegeType = [];
+              var siegePoints = [];
+              var siegeTimeRemaining = [];
+              var siegeWarChest = [];
+          
+              sieges.forEach((siege) => {
+                siegeList.push(siege);
+              });
+          
+              siegeList.forEach((siege) => {
+                if (siege.name.includes(siegeList[2].name)) {
+                      siegeNameList.push(siege.name);
+                      siegeTown.push(siege.town);
+                      siegeType.push(siege.type);
+                      siegePoints.push(siege.points);
+                      siegeTimeRemaining.push(siege.time);
+                      siegeWarChest.push(siege.warchest)}
+              });
+              console.log(siegeNameList);
+              let strNames = JSON.stringify(siegeNameList);
+              let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
+              let strTown = JSON.stringify(siegeTown);
+              let strType = JSON.stringify(siegeType);
+              let strPoints = JSON.stringify(siegePoints);
+              let strTime = JSON.stringify(siegeTimeRemaining);
+              let strWarChest = JSON.stringify(siegeWarChest);
+          
+              let siegeStatus;
+              if (strPoints.includes("-")) {
+                siegeStatus = "Defender Lead";
+              } else {
+                siegeStatus = "Attacker Lead";
+              }
+          
+                siege.setColor("#EE6123")
+                .setTitle(bold(`${nameTitle}`))
+                .addFields(
+                  {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
+                  {name: "Type:", value: strType.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "Points:", value: strPoints.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true }
+                )
+                .addFields(
+                  {name: "Time Left:", value: strTime.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replaceAll(/,/g, "\n\n").replace("[", ""), inline: true },
+                  {name: "War Chest:", value: strWarChest.replaceAll(/"|]|/g, "").replaceAll(/_/g, " ").replace("[", ""), inline: true },
+                  { name: "Status:", value: siegeStatus, inline: true }
+                )
+                .setTimestamp()
+                .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
+
+              await interaction.editReply({ embeds: [siege] })}
+            }}
+            
       )}}}
