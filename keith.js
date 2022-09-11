@@ -5,6 +5,8 @@ require("dotenv").config();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
+module.exports = { client };
+
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -35,5 +37,6 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
   }
 });
+
 
 client.login(process.env.TOKEN);
