@@ -9,7 +9,7 @@ module.exports = {
     .setName("siegesearch")
     .setDescription("Use this command to select a siege and get detailed information about it!"),
 
-  async execute(interaction, message) {
+  async execute(interaction) {
 
     const sieges = await fetch("https://shadowevil015.tech/api/v1/sieges").then((res) => res.json()).catch((err) => {return err;});
 
@@ -25,6 +25,7 @@ module.exports = {
           .setCustomId("siege")
           .setPlaceholder("Select a siege")
           .setMaxValues(1)
+          .setMinValues(1)
           .addOptions(
             {
               label: `${siegeList[0]}`,
