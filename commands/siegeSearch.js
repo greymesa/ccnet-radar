@@ -88,7 +88,7 @@ module.exports = {
         if (!interaction.isSelectMenu()) return;
           if (interaction.customId === `siege`) {
             if (interaction.values.includes(`first`)) {
-              await interaction.deferReply();
+              await interaction.reply("Searching...");
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -110,7 +110,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -141,9 +140,11 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege] })}
+
             else if (interaction.values.includes(`second`)) {
-              await interaction.deferReply();
+              await interaction.reply("Searching...");
+              const siege2 = new MessageEmbed()
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -165,7 +166,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -181,7 +181,7 @@ module.exports = {
                 siegeStatus = "Attacker Lead";
               }
           
-                siege.setColor("#EE6123")
+                siege2.setColor("#EE6123")
                 .setTitle(bold(`${nameTitle}`))
                 .addFields(
                   {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -196,9 +196,10 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege2] })}
             else if (interaction.values.includes(`third`)) {
               await interaction.deferReply();
+              const siege3 = new MessageEmbed()
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -220,7 +221,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -236,7 +236,7 @@ module.exports = {
                 siegeStatus = "Attacker Lead";
               }
           
-                siege.setColor("#EE6123")
+                siege3.setColor("#EE6123")
                 .setTitle(bold(`${nameTitle}`))
                 .addFields(
                   {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -251,10 +251,11 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege3] })}
             
             else if (interaction.values.includes(`fourth`)) {
               await interaction.deferReply();
+              const siege4 = new MessageEmbed()
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -276,7 +277,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -292,7 +292,7 @@ module.exports = {
                 siegeStatus = "Attacker Lead";
               }
           
-                siege.setColor("#EE6123")
+                siege4.setColor("#EE6123")
                 .setTitle(bold(`${nameTitle}`))
                 .addFields(
                   {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -307,10 +307,11 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege4] })}
 
             else if (interaction.values.includes(`fifth`)) {
               await interaction.deferReply();
+              const siege5 = new MessageEmbed()
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -332,7 +333,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -348,7 +348,7 @@ module.exports = {
                 siegeStatus = "Attacker Lead";
               }
           
-                siege.setColor("#EE6123")
+                siege5.setColor("#EE6123")
                 .setTitle(bold(`${nameTitle}`))
                 .addFields(
                   {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -363,10 +363,11 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege5] })}
 
             else if (interaction.values.includes(`sixth`)) {
               await interaction.deferReply();
+              const siege6 = new MessageEmbed()
               var siegeList = [];
               var siegeNameList = [];
               var siegeTown = [];
@@ -388,7 +389,6 @@ module.exports = {
                       siegeTimeRemaining.push(siege.time);
                       siegeWarChest.push(siege.warchest)}
               });
-              console.log(siegeNameList);
               let strNames = JSON.stringify(siegeNameList);
               let nameTitle = strNames.replaceAll(/"|]/g, "").replaceAll(/_/g, " ").replace("[", "");
               let strTown = JSON.stringify(siegeTown);
@@ -404,7 +404,7 @@ module.exports = {
                 siegeStatus = "Attacker Lead";
               }
           
-                siege.setColor("#EE6123")
+                siege6.setColor("#EE6123")
                 .setTitle(bold(`${nameTitle}`))
                 .addFields(
                   {name: "Besieged Town:", value: fn.clean(strTown), inline: true },
@@ -419,7 +419,7 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.editReply({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege6] })}
             }}
             
       )}}}
