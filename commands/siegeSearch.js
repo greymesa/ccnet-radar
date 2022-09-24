@@ -140,7 +140,8 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege] })}
+              await interaction.followUp({ embeds: [siege] })
+              siege.fields = []}
 
             else if (interaction.values.includes(`second`)) {
               await interaction.reply("Searching...");
@@ -196,7 +197,9 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege2] })}
+              await interaction.followUp({ embeds: [siege2] })
+              siege2.fields = []}
+
             else if (interaction.values.includes(`third`)) {
               await interaction.deferReply();
               const siege3 = new MessageEmbed()
@@ -251,7 +254,8 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege3] })}
+              await interaction.followUp({ embeds: [siege3] })
+              siege3.fields = []}
             
             else if (interaction.values.includes(`fourth`)) {
               await interaction.deferReply();
@@ -307,7 +311,8 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege4] })}
+              await interaction.followUp({ embeds: [siege4] })
+              siege4.fields = []}
 
             else if (interaction.values.includes(`fifth`)) {
               await interaction.deferReply();
@@ -363,7 +368,8 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege5] })}
+              await interaction.followUp({ embeds: [siege5] })
+              siege5.fields = []}
 
             else if (interaction.values.includes(`sixth`)) {
               await interaction.deferReply();
@@ -419,7 +425,8 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437",})
 
-              await interaction.followUp({ embeds: [siege6] })}
+              await interaction.followUp({ embeds: [siege6] })
+              siege6.fields = []}
             }}
             
       )}}}
