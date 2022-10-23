@@ -41,6 +41,16 @@ module.exports = {
         onlinePlayersName.push(player.name);
       });
 
+
+
+      let nation;
+      if (complttown.nation === "") {
+        nation = "None";
+      }
+      else {
+        nation = complttown.nation;
+      }
+
       const onlineResidents = complttown.residents.filter(resident => onlinePlayersName.includes(resident));
       const strOnlineResidents = JSON.stringify(onlineResidents);
       const residents = JSON.stringify(complttown.residents);
@@ -50,7 +60,6 @@ module.exports = {
       const coordinatesLink = `https://map.ccnetmc.com/nationsmap/#world;flat;${complttown.x},64,${complttown.z};4`;
       const bank = JSON.stringify(complttown.bank);
       const upkeep = JSON.stringify(complttown.upkeep);
-      const nation = JSON.stringify(complttown.nation);
       const capNation = nation.replaceAll("_", " ").replace(/(^\w|\s\w|\s\_)(\S*)/g,(_, m1, m2) => m1.toUpperCase() + m2.toLowerCase());
       const peaceful = JSON.stringify(complttown.peacefulness);
       const chunks = JSON.stringify(complttown.area);
@@ -58,6 +67,9 @@ module.exports = {
   
       const peacefullness = peaceful === "true" ? "Peaceful" : "Non-Peaceful";
       const codedMayor = mayor.includes("_") ? inlineCode(mayor) : mayor;
+
+
+      console.log(nation)
 
       const town = new MessageEmbed()
         .setColor(colourFill) // Sets the sidebar colour of the embed.
@@ -86,7 +98,6 @@ module.exports = {
       } else {
         town.addField("Online Residents:", codeBlock(fn.removeStyleCharacters(strOnlineResidents.replaceAll(",", ", "))));
       }
-      
       await interaction.reply({ embeds: [town] })
     }
   },
