@@ -5,6 +5,12 @@ require("dotenv").config();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
+const state = 0;
+const presences = [
+  { type: 'LISTENING', message: "what you like in men" },
+  { type: 'WATCHING', message: "you" }
+];
+
 module.exports = { client };
 
 client.commands = new Collection();
@@ -19,8 +25,13 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log('Ready!');
-  client.user.setActivity("you", { type: "WATCHING" });
   client.user.setStatus("dnd");
+    setInterval(() => {
+      state = (state + 1) % presences.length;
+      const presence = presences[state];
+
+      client.user.setActivity(presence.message, { type: presence.type });
+    }, 120000)
 });
 
 client.on('interactionCreate', async interaction => {
