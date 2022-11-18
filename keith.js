@@ -12,6 +12,7 @@ const presences = [
   { type: 'PLAYING', message: "with your feelings" },
   { type: 'COMPETING', message: "with your ex" },
   { type: 'STREAMING', message: "you sleep" },
+  { type: 'WATCHING', message: "Qu1ck3l whine about his ban" }
 ];
 
 module.exports = { client };
