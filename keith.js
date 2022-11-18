@@ -5,10 +5,13 @@ require("dotenv").config();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-const state = 0;
+let state = 0;
 const presences = [
   { type: 'LISTENING', message: "what you like in men" },
-  { type: 'WATCHING', message: "you" }
+  { type: 'WATCHING', message: "you" },
+  { type: 'PLAYING', message: "with your feelings" },
+  { type: 'COMPETING', message: "with your ex" },
+  { type: 'STREAMING', message: "you sleep" },
 ];
 
 module.exports = { client };
