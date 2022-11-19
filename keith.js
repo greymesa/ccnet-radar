@@ -11,8 +11,11 @@ const presences = [
   { type: 'WATCHING', message: "you" },
   { type: 'PLAYING', message: "with your feelings" },
   { type: 'COMPETING', message: "with your ex" },
-  { type: 'STREAMING', message: "you sleep" },
-  { type: 'WATCHING', message: "Qu1ck3l whine about his ban" }
+  { type: 'WATCHING', message: "you sleep" },
+  { type: 'WATCHING', message: "Qu1ck3l whine about his ban" },
+  { type: 'WATCHING', message: "your nation 3 days" },
+  { type: 'WATCHING', message: "Zaify make n3" },
+  { type: 'PLAYING', message: "with bedrock breaker grenades" },
 ];
 
 module.exports = { client };
