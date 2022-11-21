@@ -41,8 +41,6 @@ module.exports = {
         onlinePlayersName.push(player.name);
       });
 
-
-
       let nation;
       if (complttown.nation === "") {
         nation = "None";
@@ -54,6 +52,7 @@ module.exports = {
       const onlineResidents = complttown.residents.filter(resident => onlinePlayersName.includes(resident));
       const strOnlineResidents = JSON.stringify(onlineResidents);
       const residents = JSON.stringify(complttown.residents);
+      const resCount = residents.split(",").length;
       const trusted = JSON.stringify(complttown.trusted);
       const mayor = JSON.stringify(complttown.mayor);
       const coordinates = JSON.stringify("x: " + complttown.x + ", " + "z: " + complttown.z);
@@ -64,12 +63,16 @@ module.exports = {
       const peaceful = JSON.stringify(complttown.peacefulness);
       const chunks = JSON.stringify(complttown.area);
       const colourFill = JSON.stringify(complttown.colourCodes.fill).replaceAll(/"/g,"");
-  
+
+      let trustCount;
+      if (trusted === `"None"`) {
+        trustCount = 0
+      } else {
+        trustCount = trusted.split(",").length;
+      }
+    
       const peacefullness = peaceful === "true" ? "Peaceful" : "Non-Peaceful";
       const codedMayor = mayor.includes("_") ? inlineCode(mayor) : mayor;
-
-
-      console.log(nation)
 
       const town = new MessageEmbed()
         .setColor(colourFill) // Sets the sidebar colour of the embed.
@@ -87,8 +90,8 @@ module.exports = {
           { name: "Bank:", value: fn.removeStyleCharacters(bank), inline: true },
           { name: "Upkeep:", value: fn.removeStyleCharacters(upkeep), inline: true }
         )
-        .addField( "Residents:", codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", "))))
-        .addField( "Trusted:", codeBlock(fn.removeStyleCharacters(trusted.replaceAll(",", ", "))))
+        .addField( `Residents [${resCount}] :`, codeBlock(fn.removeStyleCharacters(residents.replaceAll(",", ", "))))
+        .addField( `Trusted [${trustCount}] :`, codeBlock(fn.removeStyleCharacters(trusted.replaceAll(",", ", "))))
         .setTimestamp()
         .setFooter({text: "Bot written by Shadowevil015", iconURL:"https://minecraft-mp.com/images/favicon/204623.png?ts=1615034437"});
 
